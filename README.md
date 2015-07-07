@@ -7,12 +7,14 @@ University of Houston Design - Javascript and jQuery
 ##Classes
 1. Intro to JS
     + primitives
+    + operators
     + variables
     + objects
     + arrays
     + functions
+    + control flow
 
-2. jQuery - Selecting and Altering DOM Components
+2. jQuery - Selecting and Altering DOM Components & Effects
     + css selector review
     + $(element)
         + .css()
@@ -20,32 +22,35 @@ University of Houston Design - Javascript and jQuery
         + .addClass()
         + .removeClass()
         + .toggleClass()
-    + animations - jquery vs css
-        + compatibility
-        + reuse
+    + animations
+        + jquery vs css
+        + .fadeIn(), .fadeOut() & .fadeTo()
+        + .show() & .hide()
+        + .slideUp(), .slideDown & .slideToggle()
+        + .animate()
+        + .toggle()
 
-3. jQuery - Effects
-    + .fadeIn(), .fadeOut() & .fadeTo()
-    + .show() & .hide()
-    + .slideUp(), .slideDown & .slideToggle()
-    + .animate()
-    + .toggle()
-
-4. jQuery - DOM Manipulation
+3. jQuery - DOM Manipulation
     + .append() vs .after()
     + .prepend() vs .before()
     + .remove()
     + .empty()
 
-5. jQuery - Events
+4. jQuery - Events
     + .on() & .off()
     + event object
     + .one()
     + .ready()
 
+5. Why jQuery? & Recap
+    + libraries -- pros and cons
+    + jQuery's diminishing returns
+    + continued importance of jQuery
+    + in-class cumulative project
+
 
 ##Learn More
-+ Codecademy / Code School
 + Jquery Docs
 + JS Docs
-+ VelocityJS (Animation Library)
++ Codecademy / Code School
++ VelocityJS (high performance animation library)
