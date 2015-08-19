@@ -2,10 +2,12 @@ University of Houston Design - Javascript and jQuery
 ====================================================
 
 ##Prework
++ Install Google Chrome
 + Review HTML/CSS
 
-##Classes
+##Lessons
 1. Intro to JS
+    + What is Javascript?
     + primitives
     + operators
     + variables

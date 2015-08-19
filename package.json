@@ -1,0 +1,44 @@
+{
+  "name": "uh-design-js-classes",
+  "version": "1.0.0",
+  "description": "University of Houston Design - Javascript and jQuery ====================================================",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --progress & node server.js",
+	"production": "NODE_ENV=production webpack --progress & node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmagnantb/UH-Design-JS-classes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmagnantb/UH-Design-JS-classes/issues"
+  },
+  "homepage": "https://github.com/bmagnantb/UH-Design-JS-classes",
+  "dependencies": {
+    "autoprefixer": "^5.2.0",
+    "babel-core": "^5.8.22",
+    "babel-loader": "^5.3.2",
+    "chai": "^3.2.0",
+    "config": "^1.15.0",
+    "css-loader": "^0.16.0",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "mocha": "^2.2.5",
+    "node-sass": "^3.2.0",
+    "piping": "^0.2.0",
+    "postcss-loader": "^0.5.1",
+    "react": "^0.13.3",
+    "react-hot-loader": "^1.2.8",
+    "react-redux": "^0.9.0",
+    "react-router": "^0.13.3",
+    "redux": "^1.0.1",
+    "sass-loader": "^2.0.1",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  }
+}
