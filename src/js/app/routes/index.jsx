@@ -1,20 +1,25 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router'
-	
+
 import {
-	AppView,
-	AssignmentsView,
-	HomeView,
+	AssignmentListView,
+	AssignmentView,
+	LessonListView,
 	LessonView,
-	SlidesView
+	SlideListView,
+	SlideView
 } from '../views'
-	
+
+require('../../../scss/style.scss')
+
 export default (
-	<Route path="/" handler={AppView}>
-		<Route path="/" handler={HomeView} />
+	<Route path="/">
+		<Route path="/" handler={LessonListView} />
 		<Route path="/lesson/:name" handler={LessonView} />
-		<Route path="/slides/?:name?/?:number?" handler={SlidesView} />
-		<Route path="/assignments/?:name?" handler={AssignmentsView} />
+		<Route path="/slides" handler={SlideListView} />
+		<Route path="/slides/:name/?:number?" handler={SlideView} />
+		<Route path="/assignments/?:name?" handler={AssignmentListView} />
+		<Route path="/assignments/:name/:assignment" handler={AssignmentView} />
 		<Redirect from="*" to="/" />
 	</Route>
 )

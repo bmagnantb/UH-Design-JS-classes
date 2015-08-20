@@ -1,13 +1,15 @@
-import AppView from './AppView'
-import AssignmentsView from './AssignmentsView'
-import HomeView from './HomeView'
+import AssignmentListView from './AssignmentListView'
+import AssignmentView from './AssignmentView'
+import LessonListView from './LessonListView'
 import LessonView from './LessonView'
-import SlidesView from './SlidesView'
+import SlideListView from './SlideListView'
+import SlideView from './SlideView'
 
 export default {
-	AppView,
-	AssignmentsView,
-	HomeView,
+	AssignmentListView,
+	AssignmentView,
+	LessonListView,
 	LessonView,
-	SlidesView
+	SlideListView,
+	SlideView
 }

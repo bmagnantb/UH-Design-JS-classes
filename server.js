@@ -1,5 +1,5 @@
 var piping = require('piping')
-    
+
 if (piping({hook: true})) {
     
     var express = require('express')

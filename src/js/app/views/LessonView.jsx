@@ -1,5 +1,5 @@
 import React from 'react'
-	
+
 require('./LessonView.scss')
 
 export default class LessonView {
