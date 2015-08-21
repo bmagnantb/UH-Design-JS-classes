@@ -5,7 +5,10 @@ export default [
 	},
 	{
 		title: 'HTML/CSS Review',
-		route: 'html-css-review'
+		route: 'html-css-review',
+		content: `
+Here's how to do that
+`
 	},
 	{
 		title: 'Read JS for Cats',
