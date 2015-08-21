@@ -33,7 +33,7 @@ module.exports = {
 				loaders: ['react-hot', 'babel']
 			},
 			{
-				test: /\.scss$/,
+				test: /\.s?css$/,
 				loader: isDev
 					? 'style!css!postcss!sass'
 					: ExtractTextPlugin.extract('style', 'css!postcss!sass')
