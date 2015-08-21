@@ -18,6 +18,7 @@ export default (
 		<Route path="/slides/:name/?:number?" handler={SlideView} />
 		<Route path="/assignments/?:name?" handler={AssignmentListView} />
 		<Route path="/assignments/:name/:assignment" handler={AssignmentView} />
+		<Redirect from="/prework" to="/assignments/prework" /> 
 		<Redirect from="*" to="/" />
 	</Route>
 )
