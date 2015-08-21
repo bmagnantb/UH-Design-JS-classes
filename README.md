@@ -2,22 +2,26 @@ University of Houston Design - Javascript and jQuery
 ====================================================
 
 ##Prework
-+ Install Google Chrome
++ Make sure [Brackets](http://brackets.io/) & [Chrome](http://google.com/chrome/browser) are installed.
 + Review HTML/CSS
++ Spend an hour or two reading [JS for Cats](http://jsforcats.com/). Don't worry about completing it, but get as far as possible. Some exposure on day 1 will help a lot.
 
 ##Lessons
 1. Intro to JS
     + What is Javascript?
+	+ comments
     + primitives
     + operators
     + variables
+	+ control flow
     + objects
-    + arrays
     + functions
-    + control flow
+	+ arrays
 
 2. jQuery - Selecting and Altering DOM Components & Effects
-    + css selector review
+    + quick css selector review
+	+ What is jQuery?
+	+ DOM
     + $(element)
         + .css()
         + .html()
