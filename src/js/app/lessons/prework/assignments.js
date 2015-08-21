@@ -9,6 +9,7 @@ export default [
 	},
 	{
 		title: 'Read JS for Cats',
-		route: 'http://jsforcats.com'
+		route: 'http://jsforcats.com',
+		listViewNote: 'Spend an hour or two on this. Don\'t worry about completing it, some exposure for day 1 will help lots.'
 	}
 ]

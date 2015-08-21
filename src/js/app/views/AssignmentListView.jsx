@@ -12,11 +12,14 @@ class AssignmentListView {
 		var assignments = this.props.assignments.map(assignment => {
 			return (
 				<li>
+					<h3>
 					{assignment.route
-						? assignment.route.indexOf('http') !== -1
-					 		? <a href={assignment.route} target="_blank">{assignment.title}</a>
-							: <Link to={`/assignments/${routeName}/${assignment.route}`}>{assignment.title}</Link>
-						: assignment.title}
+							? assignment.route.indexOf('http') !== -1
+								? <a href={assignment.route} target="_blank">{assignment.title}</a>
+								: <Link to={`/assignments/${routeName}/${assignment.route}`}>{assignment.title}</Link>
+							: assignment.title}
+					</h3>
+					<p>{assignment.listViewNote}</p>
 				</li>
 			)
 		})
