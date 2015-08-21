@@ -10,8 +10,6 @@ import {
 	SlideView
 } from '../views'
 
-require('../../../scss/style.scss')
-
 export default (
 	<Route path="/">
 		<Route path="/" handler={LessonListView} />
