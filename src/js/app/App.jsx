@@ -4,6 +4,9 @@ import { Provider } from 'react-redux'
 
 import reducer from '../app/reducers'
 
+import 'normalize.css'
+import '../../scss/style.scss'
+
 export default class App {
 	render() {
 		var Handler = this.props.handler
