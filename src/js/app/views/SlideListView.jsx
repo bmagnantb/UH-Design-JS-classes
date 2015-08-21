@@ -1,6 +1,6 @@
 import React from 'react'
 
-require('./SlideListView.scss')
+import './SlideListView.scss'
 
 export default class SlideListView {
 	render() {

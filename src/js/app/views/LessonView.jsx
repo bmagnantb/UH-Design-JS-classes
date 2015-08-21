@@ -1,6 +1,6 @@
 import React from 'react'
 
-require('./LessonView.scss')
+import './LessonView.scss'
 
 export default class LessonView {
 	render() {

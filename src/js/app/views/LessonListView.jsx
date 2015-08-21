@@ -1,6 +1,6 @@
 import React from 'react'
 
-require('./LessonListView')
+import './LessonListView'
 
 export default class LessonListView {
 	render() {

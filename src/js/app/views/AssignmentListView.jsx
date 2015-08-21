@@ -1,6 +1,6 @@
 import React from 'react'
 
-require('./AssignmentListView.scss')
+import './AssignmentListView.scss'
 
 export default class AssignmentListView {
 	render() {
