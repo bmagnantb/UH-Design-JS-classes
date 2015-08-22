@@ -70,7 +70,7 @@ export default [
 + comments are ignored by the computer
 + notes written to help you and others understand code
 
-\`\`\`
+\`\`\`hljs
 // single-line comment
 
 /*
@@ -101,7 +101,7 @@ primitives are basic values
 + preserved as text, character for character
 + in quotes, single or double
 
-\`\`\`
+\`\`\`hljs
 'this is a string'
 "also a string"
 \`\`\`
@@ -111,7 +111,7 @@ primitives are basic values
 		title: 'primitives',
 		subtitle: 'number',
 		content: `
-\`\`\`
+\`\`\`hljs
 1478
 .3319
 \`\`\`
@@ -121,7 +121,7 @@ primitives are basic values
 		title: 'primitives',
 		subtitle: 'boolean',
 		content: `
-\`\`\`
+\`\`\`hljs
 true
 false
 \`\`\`
@@ -147,14 +147,14 @@ null vs undefined
 		content: `
 + the console allows you to run code and see the result
 + cmd + opt + i  or right-click and select \`inspect element\`
-+ console.log writes a value to the console 
++ console.log writes a value to the console
 `
 	},
 	{
 		title: 'operators',
 		subtitle: 'math',
 		content: `
-\`\`\`
+\`\`\`hljs
 2 + 3 // 5
 4 - 2 // 2
 5 * 2 // 10
@@ -174,7 +174,7 @@ null vs undefined
 		title: 'operators',
 		subtitle: 'comparison',
 		content: `
-\`\`\`
+\`\`\`hljs
 1 === 1 // true
 2 === 1 // false
 
@@ -200,7 +200,7 @@ null vs undefined
 		title: 'variables',
 		subtitle: 'declaration',
 		content: `
-\`\`\`
+\`\`\`hljs
 console.log(x); // error! there is no variable named x (yet)
 
 var x;
@@ -214,13 +214,13 @@ console.log(x); // undefined
 		title: 'variables',
 		subtitle: 'assignment',
 		content: `
-\`\`\`
+\`\`\`hljs
 var x = 3;
 \`\`\`
 
 x is declared and assigned the value 3
 
-\`\`\`
+\`\`\`hljs
 x = 4;
 \`\`\`
 
@@ -235,7 +235,7 @@ x was already declared, new value 4 assigned to it
 + write descriptive, multi-word names for clarity
 + don't use non-alphanumeric characters \`!@#$%^&*...\`
 
-\`\`\`
+\`\`\`hljs
 var camelCaseYourVariableNames;
 var myName = 'Ben';
 var variableName1 = 'first variable';
@@ -250,7 +250,7 @@ var variableName3 = false;
 		content: `
 + control flow allows different code to run based on one or more conditions
 
-\`\`\`
+\`\`\`hljs
 if (true) {
 	console.log('i will always run!')
 } else {
@@ -263,13 +263,14 @@ if (true) {
 		title: 'control flow',
 		subtitle: 'complex conditions',
 		content: `
-\`\`\`
+\`\`\`hljs
 // we want the user to input a number between 1 and 10
-var x = userInputtedNumber
+var x = userInputNumber
+
 if (x > 10) {
 	console.log('this number is too large')
-} else if ( x < 1) {
-	console.log('this number is too small)
+} else if (x < 1) {
+	console.log('this number is too small')
 } else {
 	console.log('got your number, ' + x) // 'got your number, 5'
 }
