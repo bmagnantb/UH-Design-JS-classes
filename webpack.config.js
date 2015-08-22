@@ -12,18 +12,17 @@ var devServer = {
 module.exports = {
 	devServer: {
 		headers: { 'Access-Control-Allow-Origin': '*'},
-		contentBase: './build',
 		hot: true
 	},
     entry: {
-		app: isDev 
+		app: isDev
 			? [devServer.client, devServer.server, './src/js/client/app.js']
 			: './src/js/client/app.js'
 	},
 	output: {
 		path: __dirname + '/build',
 		filename: "app.js",
-		publicPath: config.get('staticFileUrl') + '/'
+		publicPath: config.get('staticFileUrl') + '/build'
 	},
 	module: {
 		loaders: [
