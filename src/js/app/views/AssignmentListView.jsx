@@ -17,12 +17,12 @@ class AssignmentListView {
 		for (var key in this.props.lessons) {
 			lessons.push({ key, lesson: this.props.lessons[key] })
 		}
-
 		lessons = lessons.sort((obj1, obj2) => obj1.lesson.date - obj2.lesson.date).map(({ key, lesson }) => {
+				var routeName = getHyphenatedLessonName(key)
 				return (
 					<li>
-						<h3>{lesson.name}</h3>
-							{this.makeAssignmentsList(lesson.assignments, getHyphenatedLessonName(key))}
+						<h3><Link to={`/assignments/${routeName}`}>{lesson.name}</Link></h3>
+							{this.makeAssignmentsList(lesson.assignments, routeName)}
 					</li>
 				)
 			})
