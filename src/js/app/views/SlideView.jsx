@@ -22,30 +22,30 @@ class SlideView {
 				if (this.props.slides[slideIndex]) {
 					var name = this.getLessonName()
 					this.context.router.transitionTo(`/slides/${name}/${slideIndex + 1}`)
-				} else 
+				} else
 					return // TODO something to signify beginning of slideshow
 			})
-		
+
 		this.handlers = {
 			sideArrowKeyup$
 		}
 	}
-	
+
 	componentWillUnmount() {
 		var { sideArrowKeyup$ } = this.handlers
 		sideArrowKeyup$.dispose()
 	}
-	
+
 	render() {
 		var slide = this.props.slides[this.getSlideIndex()]
 		if (_.isEmpty(slide)) this.context.router.replaceWith('/slides')
 		return <Slide {...slide} />
 	}
-	
+
 	getLessonName() {
 		return getCamelCaseLessonName(this.props.params.name)
 	}
-	
+
 	getSlideIndex() {
 		return Number.parseInt(this.props.params.number || 1) - 1
 	}
@@ -55,7 +55,9 @@ SlideView.contextTypes = {
 	router: React.PropTypes.func.isRequired
 }
 
-export default connect((state, props) => {
+export default connect(select)(SlideView)
+
+function select(state, props) {
 	var name = getCamelCaseLessonName(props.params.name)
 	return {slides: state[name].slides || {}}
-})(SlideView)
+}
