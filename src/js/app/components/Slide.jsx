@@ -1,15 +1,8 @@
 import React from 'react'
-import marked from 'marked'
-import highlight from 'highlight.js'
+
+import { convertMarkdown } from '../../utils'
 
 import './Slide.scss'
-import 'highlight.js/styles/agate.css'
-
-marked.setOptions({
-	gfm: true,
-	highlight: code => highlight.highlight('javascript', code).value,
-	langPrefix: ''
-})
 
 export default class Slide {
 	render() {
@@ -20,12 +13,8 @@ export default class Slide {
 					<h3>{this.props.subtitle}</h3>
 				</div>
 				<div className="slide-content"
-					dangerouslySetInnerHTML={this.makeContent(this.props.content)} />
+					dangerouslySetInnerHTML={convertMarkdown(this.props.content)} />
 			</div>
 		)
-	}
-
-	makeContent(content) {
-		return {__html: marked(content)}
 	}
 }
