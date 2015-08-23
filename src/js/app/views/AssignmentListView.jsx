@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
 
-import { getCamelCaseLessonName, getHyphenatedLessonName } from '../../utils'
+import { getCamelCaseLessonName, getHyphenatedLessonName, makeLessonList } from '../../utils'
 
 import './AssignmentListView.scss'
 
@@ -13,14 +13,11 @@ class AssignmentListView {
 	}
 
 	makeAllLessonsList() {
-		var lessons = []
-		for (var key in this.props.lessons) {
-			lessons.push({ key, lesson: this.props.lessons[key] })
-		}
-		lessons = lessons.sort((obj1, obj2) => obj1.lesson.date - obj2.lesson.date).map(({ key, lesson }) => {
+		var lessons = this.props.lessons
+			.map(({ key, lesson }) => {
 				var routeName = getHyphenatedLessonName(key)
 				return (
-					<li>
+					<li key={`assignments-lesson-${routeName}`}>
 						<h3><Link to={`/assignments/${routeName}`}>{lesson.name}</Link></h3>
 							{this.makeAssignmentsList(lesson.assignments, routeName)}
 					</li>
@@ -49,17 +46,17 @@ class AssignmentListView {
 	makeAssignmentsList(assignments, routeName) {
 		return (
 			<ul className="assignments-list">
-				{assignments.map(assignment => {
+				{assignments.map(({ route, title, listViewNote }) => {
 					return (
-						<li>
+						<li key={`assignments-list-${route}`}>
 							<h3>
-							{!assignment.route
-									? assignment.title
-									: assignment.route.indexOf('http') !== -1
-										? <a href={assignment.route} target="_blank">{assignment.title}</a>
-										: <Link to={`/assignments/${routeName}/${assignment.route}`}>{assignment.title}</Link>}
+							{!route
+									? title
+									: route.indexOf('http') !== -1
+										? <a href={route} target="_blank">{title}</a>
+										: <Link to={`/assignments/${routeName}/${route}`}>{title}</Link>}
 							</h3>
-							<p>{assignment.listViewNote}</p>
+							<p>{listViewNote}</p>
 						</li>
 					)
 				})}
@@ -78,5 +75,5 @@ function select(state, props) {
 			assignments: state[name].assignments || {}
 		}
 	}
-	return { lessons: state }
+	return { lessons: makeLessonList(state) }
 }
