@@ -1,6 +1,7 @@
 export default [
 	{
-		name: 'intro-js assignment',
-		body: 'all the stuff about the assignment'
+		title: 'intro-js assignment',
+		route: 'intro-js',
+		content: `all the stuff about the assignment`
 	}
 ]
