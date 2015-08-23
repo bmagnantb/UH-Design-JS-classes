@@ -1,4 +1,19 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400);@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300);.slide {
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300);h3 {
+  margin-bottom: 0; }
+
+h3 + p {
+  margin-top: 0; }
+.assignment {
+  margin: 0 auto;
+  max-width: 70em;
+  text-align: center; }
+  .assignment div {
+    margin: 0 auto;
+    max-width: 40em;
+    text-align: left; }
+  .assignment img {
+    border: 1px solid #ccc; }
+.slide {
   font-size: 1.7em;
   left: 50%;
   margin: 0 auto;
@@ -8,22 +23,23 @@
   transform: translate(-50%, -50%); }
   .slide h1, .slide h2, .slide h3, .slide h4, .slide h5, .slide h6 {
     margin: 0 auto 0.5em; }
+  .slide ul {
+    list-style: circle;
+    margin: 0 0 1.5em; }
+  .slide h3 + ul {
+    list-style: none; }
+  .slide li {
+    margin-bottom: 1em; }
+  .slide pre > code {
+    min-width: 20em;
+    padding: 0.5em 3em 0.5em 1.5em;
+    line-height: 1.3em; }
 
 .slide-titles {
   margin-bottom: 1.5em; }
 
 .slide-content {
   text-align: left; }
-
-ul {
-  list-style: circle;
-  margin: 0 0 1.5em; }
-
-h3 + ul {
-  list-style: none; }
-
-li {
-  margin-bottom: 1em; }
 /*!
  * Agate by Taufik Nurrohman <https://github.com/tovic>
  * ----------------------------------------------------
@@ -504,6 +520,9 @@ body {
   font-family: Source Sans Pro;
   height: 100%;
   margin: 0; }
+
+img {
+  max-width: 100%; }
 
 #app-container {
   height: 100%;
