@@ -7,7 +7,15 @@ export default [
 		title: 'HTML/CSS Review',
 		route: 'html-css-review',
 		content: `
-Here's how to do that
++ <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML Reference</a>
++ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS Reference</a>
+
+
+1. Download this <a href="build/downloads/html-css/index.html" download>html file</a>
+2. Use <a href="build/downloads/html-css/background.jpg" download>this image</a> or find one to use
+3. Style the content to look like:
+
+![Styled assignment](build/images/styled-assignment.png)
 `
 	},
 	{

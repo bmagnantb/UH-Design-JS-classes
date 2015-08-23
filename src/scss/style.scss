@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300);
 
@@ -14,6 +13,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 //	font-family: Lato;
+}
+
+img {
+	max-width: 100%;
 }
 
 #app-container {
