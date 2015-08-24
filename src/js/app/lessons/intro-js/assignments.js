@@ -1,7 +1,7 @@
 export default [
 	{
-		title: 'intro-js assignment',
+		title: 'Intro to Javascript',
 		route: 'intro-js',
-		content: `all the stuff about the assignment`
+		content: `TBA`
 	}
 ]
