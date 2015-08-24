@@ -1,16 +1,12 @@
 University of Houston Design - Javascript and jQuery
 ====================================================
 
-##Prework
-+ Make sure [Brackets](http://brackets.io/) & [Chrome](http://google.com/chrome/browser) are installed.
-+ Review HTML/CSS
-+ Spend an hour or two reading [JS for Cats](http://jsforcats.com/). Don't worry about completing it, but get as far as possible. Some exposure on day 1 will help a lot.
-
 ##Lessons
-1. Intro to JS
+1. Intro to JS - Aug 27 2015
     + What is Javascript?
 	+ comments
     + primitives
+    + console
     + operators
     + variables
 	+ control flow
@@ -18,7 +14,7 @@ University of Houston Design - Javascript and jQuery
     + functions
 	+ arrays
 
-2. jQuery - Selecting and Altering DOM Components & Effects
+2. jQuery - Animation - Sep 1 2015
     + quick css selector review
 	+ What is jQuery?
 	+ DOM
@@ -36,19 +32,19 @@ University of Houston Design - Javascript and jQuery
         + .animate()
         + .toggle()
 
-3. jQuery - DOM Manipulation
+3. jQuery - DOM Manipulation - Sep 8 2015
     + .append() vs .after()
     + .prepend() vs .before()
     + .remove()
     + .empty()
 
-4. jQuery - Events
+4. jQuery - Events - Sep 17 2015
     + .on() & .off()
     + event object
     + .one()
     + .ready()
 
-5. Why jQuery? & Recap
+5. Why jQuery? & Recap - Sep 22 2015
     + libraries -- pros and cons
     + jQuery's diminishing returns
     + continued importance of jQuery
