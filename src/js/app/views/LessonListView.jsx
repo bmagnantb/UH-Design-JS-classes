@@ -9,15 +9,13 @@ import './LessonListView.scss'
 class LessonListView {
 	render() {
 		var lessons = this.props.lessons
-			.map(({ key, lesson }) => {
-				console.log(lesson)
+			.map(({ key, lesson }) {
+				var route = (lesson.slides && lesson.assignments)
+					? `/lesson/${key}`
+					: lesson.slides ? `/slides/${key}` : `/assignments/${key}`
 				return (
-					<li>
-						<h3><Link to={`/lesson/${key}`}>{lesson.name}</Link></h3>
-						<ul>
-							{lesson.slides ? <li><Link to={`/slides/${key}`}>Slides</Link></li> : null}
-							<li><Link to={`/assignments/${key}`}>Assignments</Link></li>
-						</ul>
+					<li key={`lessonlist-lesson-${key}`}>
+						<h3><Link to={route}>{lesson.name}</Link></h3>
 					</li>
 				)
 			})
