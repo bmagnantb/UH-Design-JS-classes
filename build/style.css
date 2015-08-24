@@ -1,166 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300);h3 {
-  margin-bottom: 0; }
-
-h3 + p {
-  margin-top: 0; }
-.assignment {
-  margin: 0 auto;
-  max-width: 70em;
-  text-align: center; }
-  .assignment div {
-    margin: 0 auto;
-    max-width: 40em;
-    text-align: left; }
-  .assignment img {
-    border: 1px solid #ccc; }
-.slide {
-  font-size: 1.7em;
-  left: 50%;
-  margin: 0 auto;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%); }
-  .slide h1, .slide h2, .slide h3, .slide h4, .slide h5, .slide h6 {
-    margin: 0 auto 0.5em; }
-  .slide ul {
-    list-style: circle;
-    margin: 0 0 1.5em; }
-  .slide h3 + ul {
-    list-style: none; }
-  .slide li {
-    margin-bottom: 1em; }
-  .slide pre > code {
-    min-width: 20em;
-    padding: 0.5em 3em 0.5em 1.5em;
-    line-height: 1.3em; }
-
-.slide-titles {
-  margin-bottom: 1.5em; }
-
-.slide-content {
-  text-align: left; }
-/*!
- * Agate by Taufik Nurrohman <https://github.com/tovic>
- * ----------------------------------------------------
- *
- * #ade5fc
- * #a2fca2
- * #c6b4f0
- * #d36363
- * #fcc28c
- * #fc9b9b
- * #ffa
- * #fff
- * #333
- * #62c8f3
- * #888
- *
- */
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: .5em;
-  background: #333;
-  color: white;
-  -webkit-text-size-adjust: none; }
-
-.asciidoc .hljs-title,
-.hljs-label,
-.hljs-tag .hljs-title,
-.hljs-prompt,
-.http .hljs-request {
-  font-weight: bold; }
-
-.hljs-change,
-.hljs-code {
-  font-style: italic; }
-
-.hljs-tag,
-.ini .hljs-title {
-  color: #62c8f3; }
-
-.hljs-id,
-.hljs-cbracket,
-.hljs-tag .hljs-value {
-  color: #ade5fc; }
-
-.hljs-string,
-.hljs-bullet {
-  color: #a2fca2; }
-
-.hljs-type,
-.hljs-variable,
-.hljs-name,
-.actionscript .hljs-title,
-.aspectj .hljs-annotation,
-.aspectj .hljs-title,
-.hljs-attribute,
-.hljs-change,
-.hljs-blockquote,
-.hljs-built_in {
-  color: #ffa; }
-
-.hljs-number,
-.hljs-hexcolor,
-.hljs-link_label,
-.hljs-link_reference {
-  color: #d36363; }
-
-.hljs-keyword,
-.hljs-literal,
-.hljs-constant,
-.css .hljs-tag,
-.hljs-typename,
-.hljs-winutils {
-  color: #fcc28c; }
-
-.hljs-comment,
-.hljs-cdata,
-.hljs-preprocessor,
-.hljs-annotation,
-.hljs-decorator,
-.hljs-doctype,
-.hljs-deletion,
-.hljs-shebang,
-.apache .hljs-sqbracket,
-.tex .hljs-formula,
-.hljs-header,
-.hljs-horizontal_rule,
-.hljs-code {
-  color: #888; }
-
-.hljs-regexp,
-.hljs-attr_selector {
-  color: #c6b4f0; }
-
-.hljs-important,
-.hljs-doctype,
-.hljs-pi,
-.hljs-chunk,
-.actionscript .hljs-type,
-.hljs-shebang,
-.hljs-pragma,
-.http .hljs-attribute {
-  color: #fc9b9b; }
-
-.hljs-deletion {
-  background-color: #fc9b9b;
-  color: #333; }
-
-.hljs-addition {
-  background-color: #a2fca2;
-  color: #333; }
-
-.hljs a,
-.hljs-tag .hljs-attribute {
-  color: inherit; }
-
-.hljs a:focus,
-.hljs a:hover {
-  color: inherit;
-  text-decoration: underline; }
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300);/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
@@ -527,3 +365,168 @@ img {
 #app-container {
   height: 100%;
   position: relative; }
+  #app-container > div {
+    margin: 0 auto;
+    max-width: 60em; }
+
+header {
+  text-align: center; }
+/*!
+ * Agate by Taufik Nurrohman <https://github.com/tovic>
+ * ----------------------------------------------------
+ *
+ * #ade5fc
+ * #a2fca2
+ * #c6b4f0
+ * #d36363
+ * #fcc28c
+ * #fc9b9b
+ * #ffa
+ * #fff
+ * #333
+ * #62c8f3
+ * #888
+ *
+ */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  background: #333;
+  color: white;
+  -webkit-text-size-adjust: none; }
+
+.asciidoc .hljs-title,
+.hljs-label,
+.hljs-tag .hljs-title,
+.hljs-prompt,
+.http .hljs-request {
+  font-weight: bold; }
+
+.hljs-change,
+.hljs-code {
+  font-style: italic; }
+
+.hljs-tag,
+.ini .hljs-title {
+  color: #62c8f3; }
+
+.hljs-id,
+.hljs-cbracket,
+.hljs-tag .hljs-value {
+  color: #ade5fc; }
+
+.hljs-string,
+.hljs-bullet {
+  color: #a2fca2; }
+
+.hljs-type,
+.hljs-variable,
+.hljs-name,
+.actionscript .hljs-title,
+.aspectj .hljs-annotation,
+.aspectj .hljs-title,
+.hljs-attribute,
+.hljs-change,
+.hljs-blockquote,
+.hljs-built_in {
+  color: #ffa; }
+
+.hljs-number,
+.hljs-hexcolor,
+.hljs-link_label,
+.hljs-link_reference {
+  color: #d36363; }
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-constant,
+.css .hljs-tag,
+.hljs-typename,
+.hljs-winutils {
+  color: #fcc28c; }
+
+.hljs-comment,
+.hljs-cdata,
+.hljs-preprocessor,
+.hljs-annotation,
+.hljs-decorator,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula,
+.hljs-header,
+.hljs-horizontal_rule,
+.hljs-code {
+  color: #888; }
+
+.hljs-regexp,
+.hljs-attr_selector {
+  color: #c6b4f0; }
+
+.hljs-important,
+.hljs-doctype,
+.hljs-pi,
+.hljs-chunk,
+.actionscript .hljs-type,
+.hljs-shebang,
+.hljs-pragma,
+.http .hljs-attribute {
+  color: #fc9b9b; }
+
+.hljs-deletion {
+  background-color: #fc9b9b;
+  color: #333; }
+
+.hljs-addition {
+  background-color: #a2fca2;
+  color: #333; }
+
+.hljs a,
+.hljs-tag .hljs-attribute {
+  color: inherit; }
+
+.hljs a:focus,
+.hljs a:hover {
+  color: inherit;
+  text-decoration: underline; }
+h3 {
+  margin-bottom: 0; }
+
+h3 + p {
+  margin-top: 0; }
+.assignment div {
+  margin: 0 auto;
+  max-width: 40em;
+  text-align: left; }
+
+.assignment img {
+  border: 1px solid #ccc; }
+.slide {
+  font-size: 1.7em;
+  left: 50%;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+  .slide h1, .slide h2, .slide h3, .slide h4, .slide h5, .slide h6 {
+    margin: 0 auto 0.5em; }
+  .slide ul {
+    list-style: circle;
+    margin: 0 0 1.5em; }
+  .slide h3 + ul {
+    list-style: none; }
+  .slide li {
+    margin-bottom: 1em; }
+  .slide pre > code {
+    min-width: 20em;
+    padding: 0.5em 3em 0.5em 1.5em;
+    line-height: 1.3em; }
+
+.slide-titles {
+  margin-bottom: 1.5em; }
+
+.slide-content {
+  text-align: left; }
