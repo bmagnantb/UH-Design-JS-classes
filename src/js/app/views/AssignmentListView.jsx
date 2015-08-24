@@ -27,9 +27,9 @@ class AssignmentListView {
 		return (
 			<div>
 				<h2>Lesson Assignments</h2>
-				<ul className="lessons-list">
+				<ol className="assignmentlist-lesson-list">
 					{lessons}
-				</ul>
+				</ol>
 			</div>
 		)
 	}

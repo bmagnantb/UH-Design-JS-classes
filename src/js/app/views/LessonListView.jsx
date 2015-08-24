@@ -9,7 +9,7 @@ import './LessonListView.scss'
 class LessonListView {
 	render() {
 		var lessons = this.props.lessons
-			.map(({ key, lesson }) {
+			.map(({ key, lesson }) => {
 				var route = (lesson.slides && lesson.assignments)
 					? `/lesson/${key}`
 					: lesson.slides ? `/slides/${key}` : `/assignments/${key}`
@@ -21,11 +21,11 @@ class LessonListView {
 			})
 
 		return (
-			<div className="lesson-list">
+			<div className="lessonlist-lesson-list">
 				<h1>Lessons</h1>
-				<ul>
+				<ol>
 					{lessons}
-				</ul>
+				</ol>
 			</div>
 		)
 	}
