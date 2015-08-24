@@ -1,4 +1,5 @@
 import React from 'react'
+import { RouteHandler, Link } from 'react-router'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
@@ -9,11 +10,20 @@ import '../../scss/style.scss'
 
 export default class App {
 	render() {
-		var Handler = this.props.handler
+		var isSlideshow = this.props.path.indexOf('/slides/') === -1 || !this.props.params.name
+		var header
+		var nav
+		if (isSlideshow) {
+			header = <header><h1><Link to="/">Javascript & jQuery - UH Design</Link></h1></header>
+		}
+
 		return (
-			<Provider store={createStore(reducer)}>
-				{() => <Handler />}
-			</Provider>
+			<div>
+				{header}
+				<Provider store={createStore(reducer)}>
+					{() => <RouteHandler />}
+				</Provider>
+			</div>
 		)
 	}
 }

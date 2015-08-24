@@ -1,6 +1,8 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router'
 
+import App from '../App'
+
 import {
 	AssignmentListView,
 	AssignmentView,
@@ -11,14 +13,14 @@ import {
 } from '../views'
 
 export default (
-	<Route path="/">
+	<Route handler={App}>
 		<Route path="/" handler={LessonListView} />
 		<Route path="/lesson/:name" handler={LessonView} />
 		<Route path="/slides" handler={SlideListView} />
 		<Route path="/slides/:name/?:number?" handler={SlideView} />
 		<Route path="/assignments/?:name?" handler={AssignmentListView} />
 		<Route path="/assignments/:name/:assignment" handler={AssignmentView} />
-		<Redirect from="/prework" to="/assignments/prework" /> 
+		<Redirect from="/prework" to="/assignments/prework" />
 		<Redirect from="*" to="/" />
 	</Route>
 )

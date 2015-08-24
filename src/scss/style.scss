@@ -22,4 +22,13 @@ img {
 #app-container {
 	height: 100%;
 	position: relative;
+
+	& > div {
+		margin: 0 auto;
+		max-width: 60em;
+	}
+}
+
+header {
+	text-align: center;
 }
