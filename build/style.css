@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300);/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300);/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
@@ -355,12 +355,24 @@ html {
   height: 100%; }
 
 body {
+  color: #333;
   font-family: Source Sans Pro;
+  font-weight: 300;
   height: 100%;
   margin: 0; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300; }
+
 img {
   max-width: 100%; }
+
+a {
+  color: #333; }
+
+ul {
+  list-style: circle;
+  margin: 0 0 1.5em; }
 
 #app-container {
   height: 100%;
@@ -368,9 +380,15 @@ img {
   #app-container > div {
     margin: 0 auto;
     max-width: 60em; }
+    #app-container > div h2 {
+      font-weight: 400; }
+    #app-container > div li {
+      margin-bottom: .5em; }
 
 header {
   text-align: center; }
+  header a {
+    text-decoration: none; }
 /*!
  * Agate by Taufik Nurrohman <https://github.com/tovic>
  * ----------------------------------------------------
@@ -497,12 +515,12 @@ h3 {
 h3 + p {
   margin-top: 0; }
 .assignment div {
-  margin: 0 auto;
-  max-width: 40em;
-  text-align: left; }
+  margin: 0 auto; }
 
 .assignment img {
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  max-width: 40em;
+  width: 100%; }
 .slide {
   font-size: 1.7em;
   left: 50%;
@@ -513,9 +531,6 @@ h3 + p {
   transform: translate(-50%, -50%); }
   .slide h1, .slide h2, .slide h3, .slide h4, .slide h5, .slide h6 {
     margin: 0 auto 0.5em; }
-  .slide ul {
-    list-style: circle;
-    margin: 0 0 1.5em; }
   .slide h3 + ul {
     list-style: none; }
   .slide li {

@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d069880d6f1cc9543764"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0ddce6b4f0c61abe1e7a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -42147,7 +42147,7 @@
 					'div',
 					{ className: 'lessonlist-lesson-list' },
 					_react2['default'].createElement(
-						'h1',
+						'h2',
 						null,
 						'Lessons'
 					),
@@ -42252,7 +42252,7 @@
 					'div',
 					null,
 					_react2['default'].createElement(
-						'h1',
+						'h2',
 						null,
 						lesson.name
 					),
@@ -65368,7 +65368,7 @@
 							this.props.title
 						),
 						_react2['default'].createElement(
-							'h3',
+							'h2',
 							null,
 							this.props.subtitle
 						)

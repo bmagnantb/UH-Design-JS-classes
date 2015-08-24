@@ -19,7 +19,7 @@ class LessonListView {
 
 		return (
 			<div className="lessonlist-lesson-list">
-				<h1>Lessons</h1>
+				<h2>Lessons</h2>
 				<ol>
 					{lessons}
 				</ol>

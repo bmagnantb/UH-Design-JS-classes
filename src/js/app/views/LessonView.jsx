@@ -19,7 +19,7 @@ class LessonView {
 
 		return (
 			<div>
-				<h1>{lesson.name}</h1>
+				<h2>{lesson.name}</h2>
 				{!assignmentNum
 					? null
 					: assignmentNum > 1

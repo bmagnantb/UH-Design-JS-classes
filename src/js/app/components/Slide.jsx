@@ -10,7 +10,7 @@ export default class Slide {
 			<div className="slide">
 				<div className="slide-titles">
 					<h1>{this.props.title}</h1>
-					<h3>{this.props.subtitle}</h3>
+					<h2>{this.props.subtitle}</h2>
 				</div>
 				<div className="slide-content"
 					dangerouslySetInnerHTML={convertMarkdown(this.props.content)} />

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300);
 
 html {
@@ -6,17 +6,28 @@ html {
 }
 
 body {
+	color: #333;
 	font-family: Source Sans Pro;
+	font-weight: 300;
 	height: 100%;
 	margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-//	font-family: Lato;
+	font-weight: 300;
 }
 
 img {
 	max-width: 100%;
+}
+
+a {
+	color: #333;
+}
+
+ul {
+	list-style: circle;
+	margin: 0 0 1.5em;
 }
 
 #app-container {
@@ -26,9 +37,25 @@ img {
 	& > div {
 		margin: 0 auto;
 		max-width: 60em;
+
+		h2 {
+			font-weight: 400;
+		}
+
+		li {
+			margin-bottom: .5em;
+
+			&:first-child{
+				// margin-top: .5em;
+			}
+		}
 	}
 }
 
 header {
 	text-align: center;
+
+	a {
+		text-decoration: none;
+	}
 }
