@@ -2,25 +2,26 @@ import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
 
-import { getHyphenatedLessonName } from '../../utils'
+import { getHyphenatedLessonName, lessonHasAssignments, lessonHasSlides } from '../../utils'
 
 import './LessonView.scss'
 
 class LessonView {
 	render() {
+		var { lesson } = this.props
 		var routeName = getHyphenatedLessonName(this.props.params.name)
 
 		return (
 			<div>
-				<h1>{this.props.lesson.name}</h1>
-				{this.props.lesson.assignments && this.props.lesson.assignments.length
+				<h1>{lesson.name}</h1>
+				{lessonHasAssignments({lesson})
 					? <h3><Link to={`/assignments/${routeName}`}>Assignments</Link></h3>
 					: null}
-				{this.props.lesson.slides && this.props.lesson.slides.length
+				{lessonHasSlides({lesson})
 					? <h3><Link to={`/slides/${routeName}`}>Slides</Link></h3>
 					: null}
 				{this.props.lesson.outline
-					? makeOutline(this.props.lesson.outline, routeName)
+					? makeOutline(lesson.outline, routeName)
 					: null}
 			</div>
 		)
