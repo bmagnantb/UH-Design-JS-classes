@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0ddce6b4f0c61abe1e7a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "165412c024b97ee8fadd"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -24585,6 +24585,41 @@
 								{ to: '/' },
 								'Javascript & jQuery - UH Design'
 							)
+						),
+						_react2['default'].createElement(
+							'nav',
+							null,
+							_react2['default'].createElement(
+								'ul',
+								null,
+								_react2['default'].createElement(
+									'li',
+									null,
+									_react2['default'].createElement(
+										_reactRouter.Link,
+										{ to: '/' },
+										'Lessons'
+									)
+								),
+								_react2['default'].createElement(
+									'li',
+									null,
+									_react2['default'].createElement(
+										_reactRouter.Link,
+										{ to: '/assignments' },
+										'Assignments'
+									)
+								),
+								_react2['default'].createElement(
+									'li',
+									null,
+									_react2['default'].createElement(
+										_reactRouter.Link,
+										{ to: '/slides' },
+										'Slides'
+									)
+								)
+							)
 						)
 					);
 				}
@@ -25882,7 +25917,9 @@
 	}, {
 		title: 'HTML/CSS Review',
 		route: 'html-css-review',
-		content: '\n+ <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML Reference</a>\n+ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS Reference</a>\n\n\n1. Download this <a href="build/downloads/html-css/index.html" download>html file</a>\n2. Use <a href="build/downloads/html-css/background.jpg" download>this image</a> or find one to use\n3. Style the content to look like:\n\n![Styled assignment](build/images/styled-assignment.png)\n'
+		sidebarWidth: 50,
+		content: '\n1. Download this <a href="build/downloads/html-css/index.html" download>html file</a>\n2. Use <a href="build/downloads/html-css/background.jpg" download>this image</a> or find one to use\n3. Style the content to look like the image over there.\n\n<br>\n+ <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML Reference</a>\n+ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS Reference</a>\n',
+		sidebar: '\n![Styled assignment](build/images/styled-assignment.png)\n'
 	}, {
 		title: 'Read JS for Cats',
 		route: 'http://jsforcats.com',
@@ -26237,13 +26274,13 @@
 		slideNum: 21
 	}, {
 		text: 'objects',
-		slideNum: 22
+		slideNum: 1
 	}, {
 		text: 'functions',
-		slideNum: 23
+		slideNum: 1
 	}, {
 		text: 'arrays',
-		slideNum: 24
+		slideNum: 1
 	}];
 	module.exports = exports['default'];
 
@@ -42050,7 +42087,15 @@
 		_createClass(AssignmentView, [{
 			key: 'render',
 			value: function render() {
-				var route = this.props.assignmentTotal > 1 ? '/assignments/' + this.props.params.name : '/lesson/' + this.props.params.name;
+				var _props$assignment = this.props.assignment;
+				var title = _props$assignment.title;
+				var content = _props$assignment.content;
+				var sidebar = _props$assignment.sidebar;
+				var sidebarWidth = _props$assignment.sidebarWidth;
+
+				var hasMultipleAssignments = this.props.assignmentTotal > 1 ? true : false;
+				var linkRoute = hasMultipleAssignments ? '/assignments/' + this.props.params.name : '/lesson/' + this.props.params.name;
+				var linkText = hasMultipleAssignments ? this.props.lessonName + ' Assignments' : this.props.lessonName;
 
 				return _react2['default'].createElement(
 					'div',
@@ -42060,16 +42105,23 @@
 						null,
 						_react2['default'].createElement(
 							_reactRouter.Link,
-							{ to: route },
-							this.props.lessonName
+							{ to: linkRoute },
+							linkText
 						)
 					),
 					_react2['default'].createElement(
-						'h2',
-						null,
-						this.props.assignment.title
+						'div',
+						{ style: { width: 100 - (sidebarWidth || 0) + '%' } },
+						_react2['default'].createElement(
+							'h2',
+							null,
+							title
+						),
+						_react2['default'].createElement('div', { className: 'assignment-content',
+							dangerouslySetInnerHTML: (0, _utils.convertMarkdown)(content) })
 					),
-					_react2['default'].createElement('div', { dangerouslySetInnerHTML: (0, _utils.convertMarkdown)(this.props.assignment.content) })
+					sidebar ? _react2['default'].createElement('div', { className: 'assignment-sidebar', style: { width: sidebarWidth + '%' },
+						dangerouslySetInnerHTML: (0, _utils.convertMarkdown)(sidebar) }) : null
 				);
 			}
 		}]);

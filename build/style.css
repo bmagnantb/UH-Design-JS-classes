@@ -379,16 +379,33 @@ ul {
   position: relative; }
   #app-container > div {
     margin: 0 auto;
-    max-width: 60em; }
+    max-width: 75em; }
     #app-container > div h2 {
       font-weight: 400; }
-    #app-container > div li {
+    #app-container > div not(header) li {
       margin-bottom: .5em; }
 
 header {
   text-align: center; }
   header a {
     text-decoration: none; }
+
+nav ul {
+  border-bottom: 1px solid #999;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 40em;
+  padding: .4em 0; }
+  nav ul:after {
+    content: '';
+    display: inline-block;
+    width: 100%; }
+
+nav li {
+  display: inline-block;
+  margin-bottom: 0;
+  min-width: 7em;
+  width: 33%; }
 /*!
  * Agate by Taufik Nurrohman <https://github.com/tovic>
  * ----------------------------------------------------
@@ -514,13 +531,18 @@ h3 {
 
 h3 + p {
   margin-top: 0; }
-.assignment div {
-  margin: 0 auto; }
-
-.assignment img {
-  border: 1px solid #ccc;
-  max-width: 40em;
-  width: 100%; }
+.assignment {
+  margin: 0 auto;
+  max-width: 65em; }
+  .assignment div {
+    display: inline-block;
+    vertical-align: top; }
+  .assignment > div:first-of-type {
+    margin: 0 auto; }
+  .assignment img {
+    border: 1px solid #ccc;
+    max-width: 40em;
+    width: 100%; }
 .slide {
   font-size: 1.7em;
   left: 50%;
