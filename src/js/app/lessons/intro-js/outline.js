@@ -29,14 +29,14 @@ export default [
 	},
 	{
 		text: 'objects',
-		slideNum: 22
+		slideNum: 1
 	},
 	{
 		text: 'functions',
-		slideNum: 23
+		slideNum: 1
 	},
 	{
 		text: 'arrays',
-		slideNum: 24
+		slideNum: 1
 	}
 ]
