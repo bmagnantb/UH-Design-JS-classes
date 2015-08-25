@@ -1,5 +1,13 @@
 .assignment {
+	margin: 0 auto;
+	max-width: 65em;
+
 	div {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	& > div:first-of-type {
 		margin: 0 auto;
 	}
 

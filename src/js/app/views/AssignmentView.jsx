@@ -8,15 +8,27 @@ import './AssignmentView.scss'
 
 class AssignmentView {
 	render() {
-		var route = this.props.assignmentTotal > 1
+		var { title, content, sidebar, sidebarWidth } = this.props.assignment
+		var hasMultipleAssignments = this.props.assignmentTotal > 1 ? true : false
+		var linkRoute = hasMultipleAssignments
 			? `/assignments/${this.props.params.name}`
 			: `/lesson/${this.props.params.name}`
+		var linkText = hasMultipleAssignments
+			? `${this.props.lessonName} Assignments`
+			: this.props.lessonName
 
 		return (
 			<div className="assignment">
-				<h3><Link to={route}>{this.props.lessonName}</Link></h3>
-				<h2>{this.props.assignment.title}</h2>
-				<div dangerouslySetInnerHTML={convertMarkdown(this.props.assignment.content)} />
+				<h3><Link to={linkRoute}>{linkText}</Link></h3>
+				<div style={{width: (100 - (sidebarWidth || 0)) + '%'}}>
+					<h2>{title}</h2>
+					<div className="assignment-content"
+						dangerouslySetInnerHTML={convertMarkdown(content)} />
+				</div>
+				{sidebar
+					? <div className="assignment-sidebar" style={{width: sidebarWidth + '%'}}
+						dangerouslySetInnerHTML={convertMarkdown(sidebar)} />
+					: null}
 			</div>
 		)
 	}
