@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import reducer from '../app/reducers'
 
 import 'normalize.css'
-import '../../scss/style.scss'
+import './App.scss'
 
 export default class App {
 	render() {
@@ -14,7 +14,18 @@ export default class App {
 		var header
 		var nav
 		if (isSlideshow) {
-			header = <header><h1><Link to="/">Javascript & jQuery - UH Design</Link></h1></header>
+			header = (
+				<header>
+					<h1><Link to="/">Javascript & jQuery - UH Design</Link></h1>
+					<nav>
+						<ul>
+							<li><Link to="/">Lessons</Link></li>
+							<li><Link to="/assignments">Assignments</Link></li>
+							<li><Link to="/slides">Slides</Link></li>
+						</ul>
+					</nav>
+				</header>
+			)
 		}
 
 		return (
