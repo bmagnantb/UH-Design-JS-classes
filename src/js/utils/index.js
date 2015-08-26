@@ -4,6 +4,7 @@ import getHyphenatedLessonName from './getHyphenatedLessonName'
 import lessonHasAssignments from './lessonHasAssignments'
 import lessonHasSlides from './lessonHasSlides'
 import makeLessonList from './makeLessonList'
+import makeOutline from './makeOutline'
 
 export default {
 	convertMarkdown,
@@ -11,5 +12,6 @@ export default {
 	getHyphenatedLessonName,
 	lessonHasAssignments,
 	lessonHasSlides,
-	makeLessonList
+	makeLessonList,
+	makeOutline
 }

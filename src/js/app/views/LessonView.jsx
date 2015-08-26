@@ -6,7 +6,8 @@ import {
 	getHyphenatedLessonName,
 	getCamelCaseLessonName,
 	lessonHasAssignments,
-	lessonHasSlides
+	lessonHasSlides,
+	makeOutline
 } from '../../utils'
 
 import './LessonView.scss'
@@ -28,7 +29,7 @@ class LessonView {
 				{lessonHasSlides({lesson})
 					? <h3><Link to={`/slides/${routeName}`}>Slides</Link></h3>
 					: null}
-				{this.props.lesson.outline
+				{lesson.outline
 					? makeOutline(lesson.outline, routeName)
 					: null}
 			</div>
@@ -42,18 +43,3 @@ function select(state, props) {
 	return { lesson: state[getCamelCaseLessonName(props.params.name)] }
 }
 
-function makeOutline(outline, routeName) {
-	var items = outline.map(({text, slideNum}) => {
-		return (
-			<li key={`outline-routeName-${slideNum}`}>
-				<Link to={`/slides/${routeName}/${slideNum}`}>{text}</Link>
-			</li>
-		)
-	})
-
-	return (
-		<ul>
-			{items}
-		</ul>
-	)
-}
