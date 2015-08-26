@@ -547,10 +547,13 @@ h3 + p {
   font-size: 1.7em;
   left: 50%;
   margin: 0 auto;
+  max-width: 40em;
+  min-width: 10em;
   position: absolute;
   text-align: center;
   top: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  width: 90%; }
   .slide h1, .slide h2, .slide h3, .slide h4, .slide h5, .slide h6 {
     margin: 0 auto 0.5em; }
   .slide h3 + ul {

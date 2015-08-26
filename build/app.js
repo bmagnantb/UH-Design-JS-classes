@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "165412c024b97ee8fadd"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "288ff19ea2d8db3251e1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -26132,9 +26132,13 @@
 		value: true
 	});
 	exports['default'] = [{
-		title: 'Intro to Javascript',
-		route: 'intro-js',
-		content: 'TBA'
+		title: 'JS for Cats',
+		route: 'http://jsforcats.com',
+		listViewNote: 'Read and complete all console exercises. Experimenting in the console is the best way to learn.'
+	}, {
+		title: 'More challenging, if you have time: Codecademy - Javascript',
+		route: 'https://www.codecademy.com/en/tracks/javascript',
+		listViewNote: 'A longer, more in-depth interactive javascript coding site.'
 	}];
 	module.exports = exports['default'];
 
@@ -26172,7 +26176,7 @@
 		title: 'Intro to programming',
 		content: '\n+ computers - extremely dumb, fast, obedient\n+ programming languages tell computers what to do\n+ programing languages much stricter than human language\n+ computer has no ability to intuit meaning\n'
 	}, {
-		title: 'comments',
+		title: 'code comments',
 		subtitle: '',
 		content: '\n+ comments are ignored by the computer\n+ notes written to help you and others understand code\n\n```hljs\n// single-line comment\n\n/*\n\tmulti-line\n\tcomment\n*/\n```\n'
 	}, {
@@ -26234,6 +26238,87 @@
 		title: 'control flow',
 		subtitle: 'complex conditions',
 		content: '\n```hljs\n// we want the user to input a number between 1 and 10\nvar x = userInputNumber\n\nif (x > 10) {\n\tconsole.log(\'this number is too large\')\n} else if (x < 1) {\n\tconsole.log(\'this number is too small\')\n} else {\n\tconsole.log(\'got your number, \' + x) // \'got your number, 5\'\n}\n```\n'
+	}, {
+		title: 'functions',
+		subtitle: '',
+		content: '\n+ functions do something\n+ are invoked with `()`, e.g. `console.log()`\n+ there are many built in functions\n+ and you can write your own -- the real power behind JS\n'
+	}, {
+		title: 'functions',
+		subtitle: 'arguments',
+		content: '\n```hljs\n// \'hey\' is an argument\nconsole.log(\'hey\')\n```\n+ arguments are values that a function uses internally\n+ arguments allow functions to be flexible -- different output with different input\n+ console.log prints the arguments to the console\n'
+	}, {
+		title: 'functions',
+		subtitle: 'definition',
+		content: '\n```hljs\nfunction (parameters) { }\nfunction name(parameter1, parameter2) { }\n```\n+ a function definition creates a function\n+ function name (not necessary, but beneficial) is like a variable, the name points to the function\n+ the code between `{ }` is what the function does\n+ **"You can think of the parameter as a parking space and the argument as an automobile."** --Microsoft Developer Network\n'
+	}, {
+		title: 'functions',
+		subtitle: 'definition',
+		content: '\n```hljs\n// this function squares its argument\nfunction squared(x) {\n\treturn x * x\n}\n```\n+ this function will square any number we pass into it\n+ the x parameter is a variable that refers to any value in the function\n+ the return keyword tells the function to give that value back when the function runs\n'
+	}, {
+		title: 'functions',
+		subtitle: 'invocation ( )',
+		content: '\n```hljs\nsquared            // function squared()\nsquared.toString() // function squared(x) { return x * x }\nsquared(3)         // 9\nsquared(4)         // 16\n```\n+ a function\'s name refers to the function itself\n+ toString (another built-in function) called on a function name gives the entire function definition back\n+ a function runs by invoking it: use `()` and `arguments`, if necessary\n+ the function gives back the value that it was told to `return`\n'
+	}, {
+		title: 'functions',
+		subtitle: 'more complex',
+		content: '\n```hljs\nfunction areaOfCircle(radius) {\n\treturn Math.PI * squared(radius)\n}\n\nareaOfCircle(3)  // 28.274...\n```\n+ use functions inside other functions!\n+ functions are the heart and soul of code, where things actually happen\n'
+	}, {
+		title: 'functions',
+		subtitle: 'recap',
+		content: '\n+ are a shortcut to running some code without writing it again\n+ are defined with the option of including a name, parameters, and a return value\n+ only run when invoked `()`, and can be given arguments when invoked\n+ can produce different output with different input\n+ can use other functions\n'
+	}, {
+		title: 'objects',
+		subtitle: '',
+		content: '\n```hljs\nvar objectExample = {\n\tkey: \'value\',\n\tanotherKey: \'value2\'\n}\n```\n+ objects are like drawers with labeled things\n+ keys are labels for values\n+ objects are used to organize information\n'
+	}, {
+		title: 'objects',
+		subtitle: 'creation',
+		content: '\n```hljs\nvar person1 = {\n\tname: \'Ben\',\n\tspecies: \'human\',\n\tprofession: \'js developer\',\n\tage: 26,\n\tjob: \'js developer\'\n}\n```\n+ objects are created with `{ }`\n+ comma-separated `key: value` pairs\n+ keys must be unique\n'
+	}, {
+		title: 'objects',
+		subtitle: 'accessing and changing values',
+		content: '\n```hljs\nperson1.name           // \'Ben\'\nperson1.age            // 26\nperson1[\'profession\']  // js developer\n\n// birthday happened\nperson1.age = person1.age + 1  // 27\n```\n+ access a value with dot notation: `person1.name`\n+ access a value with brackets: `person1[\'profession\']`\n'
+	}, {
+		title: 'objects',
+		subtitle: 'objects / functions inside objects',
+		content: '\n```hljs\n// an object with functions for calculating area\nvar area = {\n\tsquare: function(x) { return x * x },\n\trectangle: function(l, w) { return l * w },\n\tcircle: function(x) { return Math.PI * x * x }\n}\n```\n+ the value of any key can be any data type, even another object or function\n+ most built-in functions are in objects\n+ `console.log`: an object named console, where the log key contains a function\n'
+	}, {
+		title: 'arrays',
+		subtitle: '',
+		content: '\n```hljs\nvar arrayExample = [\'thing1\', \'thing2\', \'thing3\']\n```\n+ arrays are lists with a specific order\n+ can contain any value\n+ created with `[ ]` and comma-separated items\n'
+	}, {
+		title: 'arrays',
+		subtitle: 'accessing and changing values',
+		content: '\n```hljs\narrayExample[0]  // \'thing1\'\narrayExample[1]  // \'thing2\'\n\narrayExample[1] = \'changed thing2\'\n```\n+ a value is accessed via its index -- the position in the list\n+ index starts at 0 for the first item\n+ nth item has index n - 1, e.g. 4th item has index 3\n'
+	}, {
+		title: 'arrays',
+		subtitle: 'complex arrays',
+		content: '\n```hljs\nvar arrayOfPeople = [\n\t{ name: \'Ben\',    profession: \'js developer\'       },\n\t{ name: \'Claire\', profession: \'database developer\' },\n\t{ name: \'Emily\',  profession: \'POTUS\'              },\n\t{ name: \'John\',   profession: \'designer\'           }\n]\n```\n+ arrays can contain any value\n+ very useful for collections of similar values\n'
+	}, {
+		title: 'arrays',
+		subtitle: 'looping / iterating',
+		content: '\n```hljs\narrayOfPeople.forEach(function(person, index) {\n\t// do something to each item here\n\t// this will print the position and name of each person\n\t// add 1 to index to get numbering to start at 1\n\tconsole.log(index + 1, person.name)\n})\n```\n+ do some kind of action with each item in the array\n+ always starts with first item and goes in order to the last\n+ other looping / iterating techniques exist -- this is the simplest\n'
+	},
+	// 	{
+	// 		title: 'JS on a web site',
+	// 		subtitle: '',
+	// 		content: `
+	// \`\`\`hljs
+	// html-highlight
+	// <body>
+	// 	<!-- all the site content here -->
+
+	// 	<script type="text/javascript" src="script.js"></script>
+	// </body>
+	// \`\`\`
+	// + use a script tag, the last element in the body
+	// + type is text/javascript, so the browser knows how to understand the code
+	// `
+	// 	},
+	{
+		title: 'that\'s the basics',
+		subtitle: '',
+		content: '\n+ Read JS for Cats in full and do all the console exercises\n+ More of a challenge: Codecademy - <a href="https://www.codecademy.com/en/tracks/javascript" target="_blank">Javascript</a>\n'
 	}];
 	module.exports = exports['default'];
 
@@ -26255,7 +26340,7 @@
 		text: 'What is Javascript?',
 		slideNum: 1
 	}, {
-		text: 'comments',
+		text: 'code comments',
 		slideNum: 7
 	}, {
 		text: 'primitives',
@@ -26273,14 +26358,14 @@
 		text: 'control flow',
 		slideNum: 21
 	}, {
-		text: 'objects',
-		slideNum: 1
-	}, {
 		text: 'functions',
-		slideNum: 1
+		slideNum: 23
+	}, {
+		text: 'objects',
+		slideNum: 30
 	}, {
 		text: 'arrays',
-		slideNum: 1
+		slideNum: 34
 	}];
 	module.exports = exports['default'];
 
@@ -26695,23 +26780,23 @@
 
 	var _AssignmentListView2 = _interopRequireDefault(_AssignmentListView);
 
-	var _AssignmentView = __webpack_require__(406);
+	var _AssignmentView = __webpack_require__(407);
 
 	var _AssignmentView2 = _interopRequireDefault(_AssignmentView);
 
-	var _LessonListView = __webpack_require__(409);
+	var _LessonListView = __webpack_require__(410);
 
 	var _LessonListView2 = _interopRequireDefault(_LessonListView);
 
-	var _LessonView = __webpack_require__(412);
+	var _LessonView = __webpack_require__(413);
 
 	var _LessonView2 = _interopRequireDefault(_LessonView);
 
-	var _SlideListView = __webpack_require__(415);
+	var _SlideListView = __webpack_require__(416);
 
 	var _SlideListView2 = _interopRequireDefault(_SlideListView);
 
-	var _SlideView = __webpack_require__(418);
+	var _SlideView = __webpack_require__(419);
 
 	var _SlideView2 = _interopRequireDefault(_SlideView);
 
@@ -26756,7 +26841,7 @@
 
 	var _utils = __webpack_require__(262);
 
-	__webpack_require__(404);
+	__webpack_require__(405);
 
 	var AssignmentListView = (function () {
 		function AssignmentListView() {
@@ -26778,6 +26863,7 @@
 					var key = _ref.key;
 					var lesson = _ref.lesson;
 
+					if (!lesson.assignments || lesson.assignments.length < 1) return null;
 					var routeName = (0, _utils.getHyphenatedLessonName)(key);
 					return _react2['default'].createElement(
 						'li',
@@ -26921,13 +27007,18 @@
 
 	var _makeLessonList2 = _interopRequireDefault(_makeLessonList);
 
+	var _makeOutline = __webpack_require__(404);
+
+	var _makeOutline2 = _interopRequireDefault(_makeOutline);
+
 	exports['default'] = {
 		convertMarkdown: _convertMarkdown2['default'],
 		getCamelCaseLessonName: _getCamelCaseLessonName2['default'],
 		getHyphenatedLessonName: _getHyphenatedLessonName2['default'],
 		lessonHasAssignments: _lessonHasAssignments2['default'],
 		lessonHasSlides: _lessonHasSlides2['default'],
-		makeLessonList: _makeLessonList2['default']
+		makeLessonList: _makeLessonList2['default'],
+		makeOutline: _makeOutline2['default']
 	};
 	module.exports = exports['default'];
 
@@ -26962,6 +27053,9 @@
 	_marked2['default'].setOptions({
 		gfm: true,
 		highlight: function highlight(code) {
+			if (code.indexOf('html-highlight') !== -1) {
+				return _highlightJs2['default'].highlight('html', code.replace(/html-highlight\n/, '')).value;
+			}
 			return _highlightJs2['default'].highlight('javascript', code).value;
 		},
 		langPrefix: ''
@@ -42044,13 +42138,62 @@
 
 /***/ },
 /* 404 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
+	exports['default'] = makeOutline;
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	var _react = __webpack_require__(66);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(168);
+
+	function makeOutline(outline, routeName) {
+		var items = outline.map(function (_ref) {
+			var text = _ref.text;
+			var slideNum = _ref.slideNum;
+
+			return _react2['default'].createElement(
+				'li',
+				{ key: 'outline-routeName-' + slideNum },
+				_react2['default'].createElement(
+					_reactRouter.Link,
+					{ to: '/slides/' + routeName + '/' + slideNum },
+					text
+				)
+			);
+		});
+
+		return _react2['default'].createElement(
+			'ul',
+			null,
+			items
+		);
+	}
+
+	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); if (true) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(231), foundReactClasses = false; if (makeExportsHot(module, __webpack_require__(66))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "makeOutline.js" + ": " + err.message); } }); } } })(); }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ },
+/* 405 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 405 */,
-/* 406 */
+/* 406 */,
+/* 407 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
@@ -42077,7 +42220,7 @@
 
 	var _utils = __webpack_require__(262);
 
-	__webpack_require__(407);
+	__webpack_require__(408);
 
 	var AssignmentView = (function () {
 		function AssignmentView() {
@@ -42147,14 +42290,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
-/* 407 */
+/* 408 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 408 */,
-/* 409 */
+/* 409 */,
+/* 410 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
@@ -42181,7 +42324,7 @@
 
 	var _utils = __webpack_require__(262);
 
-	__webpack_require__(410);
+	__webpack_require__(411);
 
 	var LessonListView = (function () {
 		function LessonListView() {
@@ -42251,14 +42394,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
-/* 410 */
+/* 411 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 411 */,
-/* 412 */
+/* 412 */,
+/* 413 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
@@ -42285,7 +42428,7 @@
 
 	var _utils = __webpack_require__(262);
 
-	__webpack_require__(413);
+	__webpack_require__(414);
 
 	var LessonView = (function () {
 		function LessonView() {
@@ -42334,7 +42477,7 @@
 							'Slides'
 						)
 					) : null,
-					this.props.lesson.outline ? makeOutline(lesson.outline, routeName) : null
+					lesson.outline ? (0, _utils.makeOutline)(lesson.outline, routeName) : null
 				);
 			}
 		}]);
@@ -42347,43 +42490,20 @@
 	function select(state, props) {
 		return { lesson: state[(0, _utils.getCamelCaseLessonName)(props.params.name)] };
 	}
-
-	function makeOutline(outline, routeName) {
-		var items = outline.map(function (_ref) {
-			var text = _ref.text;
-			var slideNum = _ref.slideNum;
-
-			return _react2['default'].createElement(
-				'li',
-				{ key: 'outline-routeName-' + slideNum },
-				_react2['default'].createElement(
-					_reactRouter.Link,
-					{ to: '/slides/' + routeName + '/' + slideNum },
-					text
-				)
-			);
-		});
-
-		return _react2['default'].createElement(
-			'ul',
-			null,
-			items
-		);
-	}
 	module.exports = exports['default'];
 
 	/* REACT HOT LOADER */ }).call(this); if (true) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(231), foundReactClasses = false; if (makeExportsHot(module, __webpack_require__(66))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "LessonView.jsx" + ": " + err.message); } }); } } })(); }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
-/* 413 */
+/* 414 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 414 */,
-/* 415 */
+/* 415 */,
+/* 416 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
@@ -42410,7 +42530,7 @@
 
 	var _utils = __webpack_require__(262);
 
-	__webpack_require__(416);
+	__webpack_require__(417);
 
 	var SlideListView = (function () {
 		function SlideListView() {
@@ -42457,7 +42577,8 @@
 				_reactRouter.Link,
 				{ to: '/slides/' + (0, _utils.getHyphenatedLessonName)(key) },
 				lesson.name
-			)
+			),
+			lesson.outline ? (0, _utils.makeOutline)(lesson.outline, key) : null
 		);
 	}
 	module.exports = exports['default'];
@@ -42466,14 +42587,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
-/* 416 */
+/* 417 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 417 */,
-/* 418 */
+/* 418 */,
+/* 419 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
@@ -42490,11 +42611,11 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	var _lodash = __webpack_require__(419);
+	var _lodash = __webpack_require__(420);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _rx = __webpack_require__(420);
+	var _rx = __webpack_require__(421);
 
 	var _rx2 = _interopRequireDefault(_rx);
 
@@ -42508,9 +42629,9 @@
 
 	var _utils = __webpack_require__(262);
 
-	var _components = __webpack_require__(421);
+	var _components = __webpack_require__(422);
 
-	__webpack_require__(425);
+	__webpack_require__(426);
 
 	var LEFT_ARROW = 37;
 	var RIGHT_ARROW = 39;
@@ -42525,7 +42646,7 @@
 			value: function componentDidMount() {
 				var _this = this;
 
-				var sideArrowKeyup$ = _rx2['default'].Observable.fromEvent(window, 'keyup').filter(function (evt) {
+				var sideArrowKeyup$ = _rx2['default'].Observable.fromEvent(window, 'keydown').filter(function (evt) {
 					return evt.keyCode === LEFT_ARROW || evt.keyCode === RIGHT_ARROW;
 				}).map(function (evt) {
 					return evt.keyCode === LEFT_ARROW ? -1 : 1;
@@ -42586,7 +42707,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
-/* 419 */
+/* 420 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -54944,7 +55065,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module), (function() { return this; }())))
 
 /***/ },
-/* 420 */
+/* 421 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global, process) {// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
@@ -65349,7 +65470,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module), (function() { return this; }()), __webpack_require__(13)))
 
 /***/ },
-/* 421 */
+/* 422 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
@@ -65362,7 +65483,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _Slide = __webpack_require__(422);
+	var _Slide = __webpack_require__(423);
 
 	var _Slide2 = _interopRequireDefault(_Slide);
 
@@ -65375,7 +65496,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
-/* 422 */
+/* 423 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
@@ -65398,7 +65519,7 @@
 
 	var _utils = __webpack_require__(262);
 
-	__webpack_require__(423);
+	__webpack_require__(424);
 
 	var Slide = (function () {
 		function Slide() {
@@ -65441,14 +65562,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
-/* 423 */
+/* 424 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 424 */,
-/* 425 */
+/* 425 */,
+/* 426 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
