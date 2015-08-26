@@ -15,6 +15,7 @@ class AssignmentListView {
 	makeAllLessonsList() {
 		var lessons = this.props.lessons
 			.map(({ key, lesson }) => {
+				if (!lesson.assignments || lesson.assignments.length < 1) return null
 				var routeName = getHyphenatedLessonName(key)
 				return (
 					<li key={`assignments-lesson-${routeName}`}>
