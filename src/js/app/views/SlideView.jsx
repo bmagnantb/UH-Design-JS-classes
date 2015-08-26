@@ -14,7 +14,7 @@ const RIGHT_ARROW = 39
 
 class SlideView {
 	componentDidMount() {
-		var sideArrowKeyup$ = Rx.Observable.fromEvent(window, 'keyup')
+		var sideArrowKeyup$ = Rx.Observable.fromEvent(window, 'keydown')
 			.filter(evt => evt.keyCode === LEFT_ARROW || evt.keyCode === RIGHT_ARROW)
 			.map(evt => evt.keyCode === LEFT_ARROW ? -1 : 1)
 			.subscribe(indexChange => {
