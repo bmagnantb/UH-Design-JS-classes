@@ -4,7 +4,7 @@ export default [
 		slideNum: 1
 	},
 	{
-		text: 'comments',
+		text: 'code comments',
 		slideNum: 7
 	},
 	{
@@ -28,15 +28,15 @@ export default [
 		slideNum: 21
 	},
 	{
-		text: 'objects',
-		slideNum: 1
+		text: 'functions',
+		slideNum: 23
 	},
 	{
-		text: 'functions',
-		slideNum: 1
+		text: 'objects',
+		slideNum: 30
 	},
 	{
 		text: 'arrays',
-		slideNum: 1
+		slideNum: 34
 	}
 ]

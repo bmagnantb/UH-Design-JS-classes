@@ -64,7 +64,7 @@ export default [
 `
 	},
 	{
-		title: 'comments',
+		title: 'code comments',
 		subtitle: '',
 		content: `
 + comments are ignored by the computer
@@ -275,6 +275,250 @@ if (x > 10) {
 	console.log('got your number, ' + x) // 'got your number, 5'
 }
 \`\`\`
+`
+	},
+	{
+		title: 'functions',
+		subtitle: '',
+		content: `
++ functions do something
++ are invoked with \`()\`, e.g. \`console.log()\`
++ there are many built in functions
++ and you can write your own -- the real power behind JS
+`
+	},
+	{
+		title: 'functions',
+		subtitle: 'arguments',
+		content: `
+\`\`\`hljs
+// 'hey' is an argument
+console.log('hey')
+\`\`\`
++ arguments are values that a function uses internally
++ arguments allow functions to be flexible -- different output with different input
++ console.log prints the arguments to the console
+`
+	},
+	{
+		title: 'functions',
+		subtitle: 'definition',
+		content: `
+\`\`\`hljs
+function (parameters) { }
+function name(parameter1, parameter2) { }
+\`\`\`
++ a function definition creates a function
++ function name (not necessary, but beneficial) is like a variable, the name points to the function
++ the code between \`{ }\` is what the function does
++ **"You can think of the parameter as a parking space and the argument as an automobile."** --Microsoft Developer Network
+`
+	},
+	{
+		title: 'functions',
+		subtitle: 'definition',
+		content: `
+\`\`\`hljs
+// this function squares its argument
+function squared(x) {
+	return x * x
+}
+\`\`\`
++ this function will square any number we pass into it
++ the x parameter is a variable that refers to any value in the function
++ the return keyword tells the function to give that value back when the function runs
+`
+	},
+	{
+		title: 'functions',
+		subtitle: 'invocation ( )',
+		content: `
+\`\`\`hljs
+squared            // function squared()
+squared.toString() // function squared(x) { return x * x }
+squared(3)         // 9
+squared(4)         // 16
+\`\`\`
++ a function's name refers to the function itself
++ toString (another built-in function) called on a function name gives the entire function definition back
++ a function runs by invoking it: use \`()\` and \`arguments\`, if necessary
++ the function gives back the value that it was told to \`return\`
+`
+	},
+	{
+		title: 'functions',
+		subtitle: 'more complex',
+		content: `
+\`\`\`hljs
+function areaOfCircle(radius) {
+	return Math.PI * squared(radius)
+}
+
+areaOfCircle(3)  // 28.274...
+\`\`\`
++ use functions inside other functions!
++ functions are the heart and soul of code, where things actually happen
+`
+	},
+	{
+		title: 'functions',
+		subtitle: 'recap',
+		content: `
++ are a shortcut to running some code without writing it again
++ are defined with the option of including a name, parameters, and a return value
++ only run when invoked \`()\`, and can be given arguments when invoked
++ can produce different output with different input
++ can use other functions
+`
+	},
+	{
+		title: 'objects',
+		subtitle: '',
+		content: `
+\`\`\`hljs
+var objectExample = {
+	key: 'value',
+	anotherKey: 'value2'
+}
+\`\`\`
++ objects are like drawers with labeled things
++ keys are labels for values
++ objects are used to organize information
+`
+	},
+	{
+		title: 'objects',
+		subtitle: 'creation',
+		content: `
+\`\`\`hljs
+var person1 = {
+	name: 'Ben',
+	species: 'human',
+	profession: 'js developer',
+	age: 26,
+	job: 'js developer'
+}
+\`\`\`
++ objects are created with \`{ }\`
++ comma-separated \`key: value\` pairs
++ keys must be unique
+`
+	},
+	{
+		title: 'objects',
+		subtitle: 'accessing and changing values',
+		content: `
+\`\`\`hljs
+person1.name           // 'Ben'
+person1.age            // 26
+person1['profession']  // js developer
+
+// birthday happened
+person1.age = person1.age + 1  // 27
+\`\`\`
++ access a value with dot notation: \`person1.name\`
++ access a value with brackets: \`person1['profession']\`
+`
+	},
+	{
+		title: 'objects',
+		subtitle: 'objects / functions inside objects',
+		content: `
+\`\`\`hljs
+// an object with functions for calculating area
+var area = {
+	square: function(x) { return x * x },
+	rectangle: function(l, w) { return l * w },
+	circle: function(x) { return Math.PI * x * x }
+}
+\`\`\`
++ the value of any key can be any data type, even another object or function
++ most built-in functions are in objects
++ \`console.log\`: an object named console, where the log key contains a function
+`
+	},
+	{
+		title: 'arrays',
+		subtitle: '',
+		content: `
+\`\`\`hljs
+var arrayExample = ['thing1', 'thing2', 'thing3']
+\`\`\`
++ arrays are lists with a specific order
++ can contain any value
++ created with \`[ ]\` and comma-separated items
+`
+	},
+	{
+		title: 'arrays',
+		subtitle: 'accessing and changing values',
+		content: `
+\`\`\`hljs
+arrayExample[0]  // 'thing1'
+arrayExample[1]  // 'thing2'
+
+arrayExample[1] = 'changed thing2'
+\`\`\`
++ a value is accessed via its index -- the position in the list
++ index starts at 0 for the first item
++ nth item has index n - 1, e.g. 4th item has index 3
+`
+	},
+	{
+		title: 'arrays',
+		subtitle: 'complex arrays',
+		content: `
+\`\`\`hljs
+var arrayOfPeople = [
+	{ name: 'Ben',    profession: 'js developer'       },
+	{ name: 'Claire', profession: 'database developer' },
+	{ name: 'Emily',  profession: 'POTUS'              },
+	{ name: 'John',   profession: 'designer'           }
+]
+\`\`\`
++ arrays can contain any value
++ very useful for collections of similar values
+`
+	},
+	{
+		title: 'arrays',
+		subtitle: 'looping / iterating',
+		content: `
+\`\`\`hljs
+arrayOfPeople.forEach(function(person, index) {
+	// do something to each item here
+	// this will print the position and name of each person
+	// add 1 to index to get numbering to start at 1
+	console.log(index + 1, person.name)
+})
+\`\`\`
++ do some kind of action with each item in the array
++ always starts with first item and goes in order to the last
++ other looping / iterating techniques exist -- this is the simplest
+`
+	},
+// 	{
+// 		title: 'JS on a web site',
+// 		subtitle: '',
+// 		content: `
+// \`\`\`hljs
+// html-highlight
+// <body>
+// 	<!-- all the site content here -->
+
+// 	<script type="text/javascript" src="script.js"></script>
+// </body>
+// \`\`\`
+// + use a script tag, the last element in the body
+// + type is text/javascript, so the browser knows how to understand the code
+// `
+// 	},
+	{
+		title: 'that\'s the basics',
+		subtitle: '',
+		content: `
++ Read JS for Cats in full and do all the console exercises
++ More of a challenge: Codecademy - <a href="https://www.codecademy.com/en/tracks/javascript" target="_blank">Javascript</a>
 `
 	}
 ]
