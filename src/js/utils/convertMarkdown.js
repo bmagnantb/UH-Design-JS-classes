@@ -5,7 +5,12 @@ import 'highlight.js/styles/agate.css'
 
 marked.setOptions({
 	gfm: true,
-	highlight: code => highlight.highlight('javascript', code).value,
+	highlight: code => {
+		if (code.indexOf('html-highlight') !== -1) {
+			return highlight.highlight('html', code.replace(/html-highlight\n/, '')).value
+		}
+		return highlight.highlight('javascript', code).value
+	},
 	langPrefix: ''
 })
 
