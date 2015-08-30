@@ -15,9 +15,8 @@ University of Houston Design - Javascript and jQuery
 	+ arrays
 
 2. jQuery - Animation - Sep 1 2015
-	+ quick css selector review
-	+ What is jQuery?
 	+ DOM
+	+ What is jQuery?
 	+ $(element)
 		+ .css()
 		+ .html()
