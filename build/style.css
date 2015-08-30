@@ -547,7 +547,7 @@ h3 + p {
   font-size: 1.7em;
   left: 50%;
   margin: 0 auto;
-  max-width: 40em;
+  max-width: 50em;
   min-width: 10em;
   position: absolute;
   text-align: center;
@@ -569,4 +569,13 @@ h3 + p {
   margin-bottom: 1.5em; }
 
 .slide-content {
+  display: inline-block;
+  margin: 0 auto;
   text-align: left; }
+
+@media screen and (max-width: 40em) {
+  .slide {
+    position: static;
+    transform: none; }
+    .slide pre > code {
+      min-width: 8em; } }
