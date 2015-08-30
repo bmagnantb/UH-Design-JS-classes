@@ -51,7 +51,7 @@ export default [
 + interactivity produces screen output via user input
 + css limited to :hover and tricks with form inputs
 + javascript enables output based on nearly any possible user input
-+ page that has slideshow, navigate away, come back
++ so we can animate, change content, etc based on many cues
 `
 	},
 	{
@@ -497,22 +497,6 @@ arrayOfPeople.forEach(function(person, index) {
 + other looping / iterating techniques exist -- this is the simplest
 `
 	},
-// 	{
-// 		title: 'JS on a web site',
-// 		subtitle: '',
-// 		content: `
-// \`\`\`hljs
-// html-highlight
-// <body>
-// 	<!-- all the site content here -->
-
-// 	<script type="text/javascript" src="script.js"></script>
-// </body>
-// \`\`\`
-// + use a script tag, the last element in the body
-// + type is text/javascript, so the browser knows how to understand the code
-// `
-// 	},
 	{
 		title: 'that\'s the basics',
 		subtitle: '',
