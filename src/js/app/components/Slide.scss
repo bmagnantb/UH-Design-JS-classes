@@ -31,6 +31,22 @@
 		padding: .5em 3em .5em 1.5em;
 		line-height: 1.3em;
 	}
+
+	.red-text {
+		color: red;
+	}
+
+	.bordered {
+		border: 1px solid black;
+	}
+
+	.large {
+		font-size: 2em;
+	}
+
+	.selected {
+		border: 4px solid green;
+	}
 }
 
 .slide-titles {

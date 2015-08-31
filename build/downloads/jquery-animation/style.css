@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+/* ----- DEFAULTS ----- */
+
+body {
+	font-family: Source Sans Pro;
+	margin: 0;
+	padding: 0;
+}
+
+code {
+	font-family: Source Code Pro;
+}
+
+
+/* ----- PAGE SPECIFIC ----- */
+
+#container {
+	margin: 0 auto;
+	max-width: 50em;
+}
+
+header {
+	border-bottom: 1px solid #999;
+	text-align: center;
+}
+
+main div h3 {
+	margin-bottom: 0;
+}
+
+main div p {
+	margin-left: 1em;
+	margin-top: .5em;
+}
