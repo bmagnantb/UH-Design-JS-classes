@@ -23,8 +23,11 @@
 		margin-bottom: 1em;
 	}
 
+	pre {
+		min-width: 25em;
+	}
+
 	pre > code {
-		min-width: 20em;
 		padding: .5em 3em .5em 1.5em;
 		line-height: 1.3em;
 	}
@@ -38,14 +41,27 @@
 	display: inline-block;
 	margin: 0 auto;
 	text-align: left;
+	max-width: 100%;
 }
 
-@media screen and (max-width: 40em) {
+.animation-notifier {
+	border: 1px solid #999;
+	display: none;
+	left: 50%;
+	letter-spacing: .1em;
+	margin: 0 auto;
+	opacity: .5;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 8em;
+}
+
+@media screen and (max-width: 45em) {
 	.slide {
 		position: static;
 		transform: none;
 
-		pre > code {
+		pre {
 			min-width: 8em;
 		}
 	}
