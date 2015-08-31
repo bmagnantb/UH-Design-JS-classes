@@ -39,9 +39,8 @@ function makeMarkup({ key, lesson }) {
 	var routeKey = getHyphenatedLessonName(key)
 	var hasAssignments = lessonHasAssignments({lesson})
 	var hasSlides = lessonHasSlides({lesson})
-	if (hasAssignments && hasSlides) route = `/lesson/${routeKey}`
+	if (hasAssignments && hasSlides || hasSlides) route = `/lesson/${routeKey}`
 	else if (hasAssignments) route = `/assignments/${routeKey}`
-	else if (hasSlides) route = `/slides/${routeKey}`
 
 	return (
 		<li key={`lessonlist-lesson-${key}`}>
