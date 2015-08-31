@@ -18,30 +18,31 @@ University of Houston Design - Javascript and jQuery
 	+ DOM
 	+ What is jQuery?
 	+ $(element)
+		+ .hide() & .show()
 		+ .css()
-		+ .html()
 		+ .addClass()
 		+ .removeClass()
 		+ .toggleClass()
 	+ animations
 		+ jquery vs css
 		+ .fadeIn(), .fadeOut() & .fadeTo()
-		+ .show() & .hide()
 		+ .slideUp(), .slideDown & .slideToggle()
 		+ .animate()
-		+ .toggle()
 
-3. jQuery - DOM Manipulation - Sep 8 2015
+3. jQuery - Events - Sep 8 2015
+	+ .on() & .off()
+	+ event object
+	+ .one()
+	+ .ready()
+
+4. jQuery - DOM Manipulation - Sep 17 2015
+	+ .html()
 	+ .append() vs .after()
 	+ .prepend() vs .before()
 	+ .remove()
 	+ .empty()
 
-4. jQuery - Events - Sep 17 2015
-	+ .on() & .off()
-	+ event object
-	+ .one()
-	+ .ready()
+
 
 5. Why jQuery? & Recap - Sep 22 2015
 	+ libraries -- pros and cons
