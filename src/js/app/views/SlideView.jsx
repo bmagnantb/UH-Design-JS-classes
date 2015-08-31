@@ -39,7 +39,12 @@ class SlideView {
 	render() {
 		var slide = this.props.slides[this.getSlideIndex()]
 		if (_.isEmpty(slide)) this.context.router.replaceWith('/slides')
-		return <Slide {...slide} />
+		return (
+			<div className="slide-view">
+				<Link to={`/lesson/${this.props.params.name}`}>{this.props.lessonName}</Link>
+				<Slide {...slide} />
+			</div>
+		)
 	}
 
 	getLessonName() {
@@ -59,5 +64,8 @@ export default connect(select)(SlideView)
 
 function select(state, props) {
 	var name = getCamelCaseLessonName(props.params.name)
-	return {slides: state[name].slides || {}}
+	return {
+		slides: state[name].slides || {},
+		lessonName: state[name].name
+	}
 }
