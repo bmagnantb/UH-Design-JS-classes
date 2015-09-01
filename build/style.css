@@ -543,6 +543,10 @@ h3 + p {
     border: 1px solid #ccc;
     max-width: 40em;
     width: 100%; }
+  .assignment .assignment-content li > p {
+    margin-bottom: 0; }
+  .assignment .assignment-content li > ul, .assignment .assignment-content li > ol {
+    margin-top: .5em; }
 .slide {
   font-size: 1.7em;
   left: 50%;
