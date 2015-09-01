@@ -16,4 +16,14 @@
 		max-width: 40em;
 		width: 100%;
 	}
+
+	.assignment-content {
+		li > p {
+			margin-bottom: 0;
+		}
+
+		li > ul, li > ol {
+			margin-top: .5em;
+		}
+	}
 }
