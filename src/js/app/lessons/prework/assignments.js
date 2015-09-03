@@ -1,4 +1,4 @@
-import downloads from './downloads/prework'
+import download from './downloads/prework'
 
 export default [
 	{
@@ -10,7 +10,7 @@ export default [
 		route: 'html-css-review',
 		sidebarWidth: 50,
 		content: `
-1. Download this <a href="${downloads}" download>folder</a>
+1. <a href="${download}" download>Download</a>
 2. Style the html to look like the image over there.
 
 <br>
