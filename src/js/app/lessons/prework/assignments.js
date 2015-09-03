@@ -1,3 +1,5 @@
+import downloads from './downloads/prework'
+
 export default [
 	{
 		title: 'Make sure Brackets and Chrome are installed',
@@ -8,9 +10,8 @@ export default [
 		route: 'html-css-review',
 		sidebarWidth: 50,
 		content: `
-1. Download this <a href="build/downloads/html-css/index.html" download>html file</a>
-2. Use <a href="build/downloads/html-css/background.jpg" download>this image</a> or find one to use
-3. Style the content to look like the image over there.
+1. Download this <a href="${downloads}" download>folder</a>
+2. Style the html to look like the image over there.
 
 <br>
 + <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML Reference</a>

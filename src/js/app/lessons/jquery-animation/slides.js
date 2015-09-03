@@ -1,5 +1,7 @@
 import $ from 'jquery'
 
+import download from './downloads/class/animation-exercise'
+
 export default [
 	{
 		title: 'jQuery Animation',
@@ -112,8 +114,7 @@ html-highlight
 		title: 'Using JS in Web Pages',
 		subtitle: 'let\'s do it',
 		content: `
-+ <a href="build/downloads/jquery-animation/index.html" download>jQuery Animation Demo HTML</a>
-+ <a href="build/downloads/jquery-animation/style.css" download>jQuery Animation Demo CSS</a>
++ <a href="${download}" download>jQuery Animation Exercise</a>
 `
 	},
 	{

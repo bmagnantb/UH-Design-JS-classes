@@ -28,14 +28,19 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.jsx?$/,
-				exclude: /node_modules/,
+				exclude: [ /node_modules/, /downloads/ ],
 				loaders: ['react-hot', 'babel']
 			},
 			{
 				test: /\.s?css$/,
+				exclude: /downloads/,
 				loader: isDev
 					? 'style!css!postcss!sass'
 					: ExtractTextPlugin.extract('style', 'css!postcss!sass')
+			},
+			{
+				test: /downloads/,
+				loader: 'file?context=src/js/app/lessons&name=/[path][name].zip!zip-it'
 			}
 		],
 		postcss: function() { return [autoprefixer] }
