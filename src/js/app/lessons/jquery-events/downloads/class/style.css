@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+
+body {
+	font-family: Source Sans Pro;
+	margin: 0;
+}
+
+#container {
+	max-width: 40em;
+	margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 .5em;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul h2, ul h3 {
+	display: inline-block;
+}
+
+ul.top-level > li {
+	margin-bottom: 1em;
+}
+
+ul:not(.top-level) {
+	display: none;
+}
+
+.fa-minus {
+	display: none;
+}
+
+.slides {
+	height: 20em;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 30em;
+}
+
+.slides > div {
+	position: absolute;
+}
+
+.slides > div:not(.arrow) {
+	height: 20em;
+	width: 30em;
+}
+
+.slides h3 {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.slides .arrow {
+	padding: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1000;
+}
+
+.slides .arrow.left {
+	left: 0;
+}
+
+.slides .arrow.right {
+	right: 0;
+}
