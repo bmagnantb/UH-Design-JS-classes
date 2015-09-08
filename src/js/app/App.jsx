@@ -1,19 +1,15 @@
 import React from 'react'
 import { RouteHandler, Link } from 'react-router'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-
-import reducer from '../app/reducers'
 
 import 'normalize.css'
 import './App.scss'
 
 export default class App {
 	render() {
-		var isSlideshow = this.props.path.indexOf('/slides/') === -1 || !this.props.params.name
+		var isntSlideshow = this.props.path.indexOf('/slides/') === -1 || !this.props.params.name
 		var header
 		var nav
-		if (isSlideshow) {
+		if (isntSlideshow) {
 			header = (
 				<header>
 					<h1><Link to="/">Javascript & jQuery - UH Design</Link></h1>
@@ -31,9 +27,7 @@ export default class App {
 		return (
 			<div>
 				{header}
-				<Provider store={createStore(reducer)}>
-					{() => <RouteHandler />}
-				</Provider>
+				<RouteHandler />
 			</div>
 		)
 	}
