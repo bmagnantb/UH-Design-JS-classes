@@ -41,7 +41,7 @@ class SlideView {
 		if (_.isEmpty(slide)) this.context.router.replaceWith('/slides')
 		return (
 			<div className="slide-view">
-				<span class="crumbs">
+				<span className="crumbs">
 					<Link to='/lessons'>Lessons</Link>
 					{' / '}
 					<Link to={`/lesson/${this.props.params.name}`}>{this.props.lessonName}</Link>
