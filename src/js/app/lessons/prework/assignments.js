@@ -11,6 +11,7 @@ export default [
 		sidebarWidth: 50,
 		content: `
 1. <a href="${download}" download>Download</a>
+
 2. Style the html to look like the image over there.
 
 <br>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Event Assignment</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div id="container">
+		<div class="tabs">
+			<div class="active">
+				<h3>Tab 1</h3>
+				<p>1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac fermentum sem, aliquet facilisis sem. Vestibulum nunc nunc, viverra volutpat suscipit eu, facilisis eu odio. Quisque eget eleifend arcu. Morbi gravida hendrerit sem sed accumsan. Vivamus fermentum suscipit dolor, sit amet blandit augue luctus ut. Duis porttitor, mauris ac congue eleifend, ex lorem ullamcorper tellus, vel venenatis justo nunc at magna</p>
+			</div>
+			<div>
+				<h3>Tab 2</h3>
+				<p>2  Nullam consequat, quam quis lobortis tincidunt, ante risus dapibus massa, convallis finibus nisi est quis purus. Praesent faucibus vel magna a euismod. Donec congue placerat quam scelerisque porttitor. Donec condimentum risus vitae leo tristique lacinia.</p>
+			</div>
+			<div>
+				<h3>Tab 3</h3>
+				<p>3 Sed dignissim orci eu consequat congue. Nam hendrerit lectus mauris, eget tempus mauris iaculis eu. Maecenas sit amet sodales elit. Sed est eros, finibus et nulla in, pulvinar pretium lorem. Suspendisse mattis congue justo non gravida. Proin laoreet volutpat ipsum, aliquet blandit lacus eleifend sit amet.</p>
+			</div>
+			<div>
+				<h3>Tab 4</h3>
+				<p>4  Ut fermentum vel leo non vulputate. Phasellus vitae semper nibh. Sed consectetur urna sed lacus laoreet efficitur. In non purus semper, porttitor lacus ut, luctus est. Phasellus sollicitudin arcu odio, at lobortis nunc cursus vitae. Vivamus hendrerit sapien erat, ut porttitor nunc blandit eu. Aenean a placerat sem. Maecenas auctor scelerisque malesuada.</p>
+			</div>
+		</div>
+
+		<div class="game">
+			<canvas width="400" height="400"></canvas>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+		var $h3s = $('.tabs h3')
+		$h3s.each(function(index, h3) {
+			$(h3).css({
+				marginLeft: index*4 + 'em'
+			})
+		})
+	</script>
+	<script src="space-invaders.js"></script>
+
+</body>
+</html>

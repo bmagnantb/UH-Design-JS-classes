@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300);
+
+body {
+	color: #333;
+	font-family: Roboto Slab;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Roboto;
+	font-weight: 400;
+}
+
+#container {
+	margin: 0 auto;
+	max-width: 50em;
+}
+
+.tabs {
+	border: 1px solid black;
+	margin-top: 2em;
+	padding: 1em;
+	position: relative;
+}
+
+.tabs .active {
+	padding: 3em 2em 1.5em;
+}
+
+.tabs h3 {
+	color: #777;
+	display: inline-block;
+	left: 3rem;
+	margin-top: 0;
+	position: absolute;
+	top: 1em;
+}
+
+.tabs .active h3 {
+	color: #333;
+	font-weight: 500;
+}
+
+.tabs p {
+	display: none;
+	margin: 0;
+}
+
+.tabs .active p {
+	display: initial;
+}
+
+.game {
+	margin-top: 3em;
+}
+
+canvas {
+	border: 1px solid black;
+	display: block;
+	margin: 0 auto;
+}
