@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "1b15a58069c273bc0ab8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "787bfc5e335f07b3fbf3"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -74512,7 +74512,7 @@
 
 	var _jqueryEvents2 = _interopRequireDefault(_jqueryEvents);
 
-	var _recap = __webpack_require__(438);
+	var _recap = __webpack_require__(439);
 
 	var _recap2 = _interopRequireDefault(_recap);
 
@@ -74614,7 +74614,7 @@
 		title: 'HTML/CSS Review',
 		route: 'html-css-review',
 		sidebarWidth: 50,
-		content: '\n1. <a href="' + _downloadsPrework2['default'] + '" download>Download</a>\n2. Style the html to look like the image over there.\n\n<br>\n+ <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML Reference</a>\n+ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS Reference</a>\n',
+		content: '\n1. <a href="' + _downloadsPrework2['default'] + '" download>Download</a>\n\n2. Style the html to look like the image over there.\n\n<br>\n+ <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML Reference</a>\n+ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS Reference</a>\n',
 		sidebar: '\n![Styled assignment](build/images/styled-assignment.png)\n'
 	}, {
 		title: 'Read JS for Cats',
@@ -75449,11 +75449,11 @@
 
 	var _assignments2 = _interopRequireDefault(_assignments);
 
-	var _slides = __webpack_require__(435);
+	var _slides = __webpack_require__(436);
 
 	var _slides2 = _interopRequireDefault(_slides);
 
-	var _outline = __webpack_require__(437);
+	var _outline = __webpack_require__(438);
 
 	var _outline2 = _interopRequireDefault(_outline);
 
@@ -75478,19 +75478,40 @@
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
-	"use strict";
+	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	Object.defineProperty(exports, '__esModule', {
+		value: true
 	});
-	exports["default"] = [];
-	module.exports = exports["default"];
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	var _reactRouter = __webpack_require__(168);
+
+	var _downloadsAssignmentJqueryEventsAssignment = __webpack_require__(435);
+
+	var _downloadsAssignmentJqueryEventsAssignment2 = _interopRequireDefault(_downloadsAssignmentJqueryEventsAssignment);
+
+	exports['default'] = [{
+		title: 'Tabs & Space Invaders',
+		route: 'events',
+		sidebar: '',
+		sidebarWidth: 30,
+		content: '\n1. <a href="' + _downloadsAssignmentJqueryEventsAssignment2['default'] + '" download>Download</a>\n\n2. Take a look at the index.html. There is a set of tabs and a canvas element.\n\n3. Make the tabs work with click handlers -- <a href="http://bmagnantb.github.io/uh-design-js/#/slides/jqueryAnimation/17" target="_blank">.addClass() and .removeClass()</a> will be helpful here.\n\n4. The included space-invaders.js file creates a function called `spaceInvaders`. Invoke it in your js file. It starts a space-invaders-ish game in the canvas and returns an object with several functions to be called in event handlers.\n\t+ when left and right arrows are pressed or held down, call `leftDown()` and `rightDown()`\n\t+ when space is pressed or held down, call `shoot()`\n\t+ when the keys are released, call `leftUp()`, `rightUp()`, and `stopShoot()`\n'
+	}];
+	module.exports = exports['default'];
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(233); if (makeExportsHot(module, __webpack_require__(66))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "assignments.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
 /* 435 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "/jquery-events/downloads/assignment/jquery-events-assignment.zip"
+
+/***/ },
+/* 436 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -75507,7 +75528,7 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _downloadsClassJqueryEventExercise = __webpack_require__(436);
+	var _downloadsClassJqueryEventExercise = __webpack_require__(437);
 
 	var _downloadsClassJqueryEventExercise2 = _interopRequireDefault(_downloadsClassJqueryEventExercise);
 
@@ -75596,13 +75617,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
-/* 436 */
+/* 437 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/jquery-events/downloads/class/jquery-event-exercise.zip"
 
 /***/ },
-/* 437 */
+/* 438 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -75637,7 +75658,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
-/* 438 */
+/* 439 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -75650,7 +75671,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _lessonsRecap = __webpack_require__(439);
+	var _lessonsRecap = __webpack_require__(440);
 
 	var _lessonsRecap2 = _interopRequireDefault(_lessonsRecap);
 
@@ -75666,7 +75687,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
-/* 439 */
+/* 440 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -75679,7 +75700,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _slides = __webpack_require__(440);
+	var _slides = __webpack_require__(441);
 
 	var _slides2 = _interopRequireDefault(_slides);
 
@@ -75697,7 +75718,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ },
-/* 440 */
+/* 441 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(2), RootInstanceProvider = __webpack_require__(10), ReactMount = __webpack_require__(12), React = __webpack_require__(66); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
