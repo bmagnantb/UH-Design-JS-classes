@@ -1,0 +1,53 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+#container {
+	margin: 0 auto;
+	max-width: 60em;
+	text-align: justify;
+}
+
+#container::after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+#container > div {
+	border: 1px solid white;
+	display: inline-block;
+	margin-bottom: 1em;
+	padding: 0 1em;
+	text-align: left;
+	vertical-align: top;
+	width: 30%;
+}
+
+.establishment {
+	border: 1px solid black !important;
+}
+
+.establishment h3:hover {
+	text-decoration: underline;
+}
+
+.rating span {
+	color: #ccc;
+}
+
+.images img {
+	max-width: 100%;
+}
+
+.fa-times {
+	display: none;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	z-index: 1000;
+}
