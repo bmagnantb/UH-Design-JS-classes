@@ -40,7 +40,10 @@ function makeMarkup({ key, lesson }) {
 	var hasAssignments = lessonHasAssignments({lesson})
 	var hasSlides = lessonHasSlides({lesson})
 	if (hasAssignments && hasSlides || hasSlides) route = `/lesson/${routeKey}`
-	else if (hasAssignments) route = `/assignments/${routeKey}`
+	else if (hasAssignments) {
+		if (hasAssignments === 1) route = `/assignments/${routeKey}/${lesson.assignments[0].route}`
+		else route = `/assignments/${routeKey}`
+	}
 
 	return (
 		<li key={`lessonlist-lesson-${key}`}>
