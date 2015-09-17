@@ -161,8 +161,6 @@ function spaceInvaders(canvasId) {
 			})
 		}
 
-		console.log(invaders)
-
 		return invaders
 	}
 
