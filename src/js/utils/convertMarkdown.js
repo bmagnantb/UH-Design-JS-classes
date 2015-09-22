@@ -9,6 +9,9 @@ marked.setOptions({
 		if (code.indexOf('html-highlight') !== -1) {
 			return highlight.highlight('html', code.replace(/html-highlight\n/, '')).value
 		}
+		if (code.indexOf('css-highlight') !== -1) {
+			return highlight.highlight('css', code.replace(/css-highlight\n/, '')).value
+		}
 		return highlight.highlight('javascript', code).value
 	},
 	langPrefix: ''
