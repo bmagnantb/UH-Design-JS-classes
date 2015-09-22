@@ -5,11 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var isDev = process.env.NODE_ENV === 'development' ? true : false
 
 module.exports = {
-	devServer: {
-		headers: { 'Access-Control-Allow-Origin': '*'},
-		hot: true
-	},
-    entry: {
+	entry: {
 		app: './src/js/client/app.js'
 	},
 	output: {
@@ -42,7 +38,6 @@ module.exports = {
 		extensions: ['', '.js', '.jsx']
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin(),
 		new ExtractTextPlugin('style.css')
 	]
 }
