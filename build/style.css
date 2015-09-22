@@ -564,6 +564,23 @@ h3 + p {
     list-style: none; }
   .slide li {
     margin-bottom: 1em; }
+  .slide #hover-example {
+    transition: font-size 0.5s ease, color 0.5s ease; }
+    .slide #hover-example:hover {
+      font-size: 1.5em;
+      color: #f33; }
+    .slide #hover-example:last-of-type {
+      position: absolute; }
+  .slide #hover-example2 {
+    position: relative; }
+    .slide #hover-example2 > div {
+      left: -20%;
+      opacity: 0;
+      position: absolute;
+      top: -50%;
+      transition: opacity 0.5s ease; }
+    .slide #hover-example2:hover > div {
+      opacity: 1; }
   .slide pre {
     min-width: 25em; }
   .slide pre > code {
