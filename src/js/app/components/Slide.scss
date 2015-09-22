@@ -23,6 +23,36 @@
 		margin-bottom: 1em;
 	}
 
+	#hover-example {
+		transition: font-size .5s ease,
+			        color .5s ease;
+
+		&:hover {
+			font-size: 1.5em;
+			color: #f33;
+		}
+
+		&:last-of-type {
+			position: absolute;
+		}
+	}
+
+	#hover-example2 {
+		position: relative;
+
+		& > div {
+			left: -20%;
+			opacity: 0;
+			position: absolute;
+			top: -50%;
+			transition: opacity .5s ease;
+		}
+
+		&:hover > div {
+			opacity: 1;
+		}
+	}
+
 	pre {
 		min-width: 25em;
 	}

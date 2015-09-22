@@ -1,0 +1,29 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+#container {
+	margin: 0 auto;
+	max-width: 50em;
+}
+
+.hover-trigger {
+	display: inline-block;
+	margin: 1em 3em;
+	vertical-align: top;
+}
+
+.on-hover {
+	border: 1px solid black;
+	left: 50%;
+	opacity: 0;
+	padding: 1em;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 1s ease;
+}
+
+.show {
+	opacity: 1;
+}

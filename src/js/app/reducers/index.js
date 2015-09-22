@@ -5,7 +5,7 @@ import introJs from './intro-js'
 import jqueryAnimation from './jquery-animation'
 import jqueryEvents from './jquery-events'
 import groupProject from './group-project'
-import recap from './recap'
+import funStuff from './fun-stuff'
 
 export default combineReducers({
 	prework,
@@ -13,5 +13,5 @@ export default combineReducers({
 	jqueryAnimation,
 	jqueryEvents,
 	groupProject,
-	recap
+	funStuff
 })
